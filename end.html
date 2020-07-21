@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form id = "form1" runat = "server">
+        <input type ='file' id = "demo" />
+        <img id = "myid" src = "#" alt = "new image" />
+    </form>
+</body>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function display(input) {
+   if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(event) {
+         $('#myid').attr('src', event.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+   }
+}
+
+$("#demo").change(function() {
+   display(this);
+});
+</script>
+</html>
