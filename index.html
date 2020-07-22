@@ -412,7 +412,7 @@
 
 							<!-- Budget ============================== -->
 							<div class="branch" id="a2budget">
-								<div class="step" data-state="budget">
+								<div class="step" data-state="a3budget">
 									<div class="question_title">
 										<h3>Plase fill with your details</h3>
 										<p>Ei duo homero postea dignissim.</p>
@@ -451,6 +451,26 @@
 													<label>Please accept <a href="#" data-toggle="modal"
 															data-target="#terms-txt">terms and conditions</a>.</label>
 												</div>
+											</div>
+											<!-- /box_general -->
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+							</div>
+							<!-- /Budget ============================== -->
+
+							<!-- Budget ============================== -->
+							<div class="branch" id="a3budget">
+								<div class="step" data-state="budget">
+									<div class="question_title">
+										<h3>Plase fill with your details</h3>
+										<p>Ei duo homero postea dignissim.</p>
+									</div>
+									<div class="row justify-content-center">
+										<div class="col-lg-9">
+											<div class="box_general">
+												jhjhgjhg
 											</div>
 											<!-- /box_general -->
 										</div>
@@ -538,33 +558,23 @@
 													<div id="collapseOne" class="collapse show"
 														aria-labelledby="headingOne" data-parent="#accordionExample">
 														<div class="card-body">
-															<div class="card-header" id="headingOne">
-																<h2 class="mb-0">
-																	<button class="btn btn-link" type="button"
-																		data-toggle="collapse" data-target="#collapseOne"
-																		aria-expanded="true" aria-controls="collapseOne">
-																		Start
-																		<i class="fa fa-plus-circle" ></i>
-																	</button>
-																</h2>
-															</div>
-															<hr>
-															<div>
-																<div class="">
-																	
-																	<textarea class="form-control" rows="8" cols="40" id="comment" placeholder="Enter text here" ></textarea>
+															<textarea class="form-control" rows="8" cols="40" id="comment" placeholder="Enter text here" ></textarea>
+															<div class="input-group mb-3">
+																<div class="input-group-prepend">
+																	<span class="input-group-text">Upload Pictures here</span>
 																</div>
-																<div class="input-group mb-3">
-																	<div class="input-group-prepend">
-																	  <span class="input-group-text">Upload Pictures here</span>
-																	</div>
-																	<div class="custom-file">
-																	  <input type="file" class="custom-file-input" id="inputGroupFile01">
-																	  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-																	</div>
-																  </div>
-															</div>
-															
+																<div class="custom-file">
+																	<input type="file" class="custom-file-input" id="inputGroupFile01">
+																	<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+																</div>
+																</div>
+																<input id="fileupload" type="file" multiple="multiple" />
+																<hr />
+																<b>Live Preview</b>
+																<br />
+																<br />
+																<div id="dvPreview">
+																</div>	
 														</div>
 													</div>
 												</div>
@@ -624,17 +634,17 @@
 													</div>
 												</div>
 												<div class="card">
-													<div class="card-header" id="headingThree">
+													<div class="card-header" id="headingFour">
 														<h2 class="mb-0">
 															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseThree"
-																aria-expanded="false" aria-controls="collapseThree">
+																data-toggle="collapse" data-target="#collapseFour"
+																aria-expanded="false" aria-controls="collapseFour">
 																kontakt
 															</button>
 														</h2>
 													</div>
-													<div id="collapseThree" class="collapse"
-														aria-labelledby="headingThree" data-parent="#accordionExample">
+													<div id="collapseFour" class="collapse"
+														aria-labelledby="headingFour" data-parent="#accordionExample">
 														<div class="card-body">
 															Anim pariatur cliche reprehenderit, enim eiusmod high life
 															a
@@ -727,7 +737,7 @@
 	<script src="js/menu.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/wizard_func_multiple_branch.js"></script>
-
+	<script src="js/uploadImage.js"></script>
 </body>
 
 </html>
