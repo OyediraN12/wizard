@@ -20,14 +20,14 @@ window.onload = function () {
                     }
                     reader.readAsDataURL(file);
                 } else {
-                    alert(file.name + " is not a valid image file.");
+                    console.log(file.name + " is not a valid image file.");
                     dvPreview.innerHTML = "";
                     return false;
                 }
                 // dvPreview.appendChild("<br />");
             }
         } else {
-            alert("This browser does not support HTML5 FileReader.");
+            console.log("This browser does not support HTML5 FileReader.");
         }
     }
 };
