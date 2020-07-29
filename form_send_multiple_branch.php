@@ -25,11 +25,11 @@
 	<!-- YOUR CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
     
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
     function delayedRedirect(){
         window.location = "index.html"
     }
-    </script>
+    </script> -->
 
 </head>
 <body style="background:#f8f8f8 url(img/pattern.svg) repeat;" onLoad="setTimeout('delayedRedirect()', 5000)">
@@ -102,6 +102,60 @@
 						$message .= "\nTelephone " . $_POST['telephone'];
 						$message .= "\nCountry: " . $_POST['country'];
 						$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
+
+						if (isset($_POST['menu_1_answers']) && $_POST['menu_1_answers'] != "")
+							{
+							$message.= "\nMenu Selected:\n";
+							foreach($_POST['menu_1_answers'] as $value)
+								{
+								$message.= "-" . trim(stripslashes($value)) . "\n";
+								};
+								$message .= "\nOther menu: " . $_POST['menu_other'] . "\n";
+								
+							}
+						
+						if (isset($_FILES['files']) && $_FILES['files'] != "")
+							{
+							$message.= "\nPictures Upload:\n";
+							// File upload configuration 
+							$targetDir = "uploads/"; 
+							$allowTypes = array('jpg','png','jpeg','gif'); 
+							
+							$statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = ''; 
+							$fileNames = array_filter($_FILES['files']['name']); 
+							if(!empty($fileNames)){ 
+								foreach($_FILES['files']['name'] as $key=>$val){ 
+									// File upload path 
+									$fileName = basename($_FILES['files']['name'][$key]); 
+									$newFilename = round(microtime(true)).'_'.$fileName;
+									$message.= "\nFile Name:\n". $newFilename;
+									$targetFilePath = $targetDir . $newFilename; 
+									
+									// Check whether file type is valid 
+									$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION); 
+									if(in_array($fileType, $allowTypes)){ 
+										// Upload file to server 
+										if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)){ 
+											// Image db insert sql 
+											$insertValuesSQL .= "('".$fileName."', NOW()),"; 
+										}else{ 
+											$errorUpload .= $_FILES['files']['name'][$key].' | '; 
+										} 
+									}else{ 
+										$errorUploadType .= $_FILES['files']['name'][$key].' | '; 
+									} 
+								}
+							}
+							// foreach($_POST['pictures_upload'] as $value)
+							// 	{
+							// 	$message.= "\nsdsdsdsd:\n";
+
+							// 	};
+								
+							}
+						
+
+						echo $message;
 												
 						//Receive Variable
 						$sentOk = mail($to,$subject,$message,$headers);
