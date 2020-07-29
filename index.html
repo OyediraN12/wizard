@@ -33,9 +33,11 @@
 
 	<!-- YOUR CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
+	<link href="./css/popupImage.css" rel="stylesheet">
 
 	<script src="js/modernizr.js"></script>
 	<!-- Modernizr -->
+
 
 </head>
 
@@ -475,8 +477,13 @@
 												<input id="answer_a1" name="answers_1[]" type="checkbox"
 													value="Divi robotics lab" class="required">
 												<label for="answer_a1" class="p-0">
-													<img src="img/gallery/preview56.jpg"
-														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
+													<img 
+														id="myImg" 
+														src="img/gallery/preview56.jpg"
+														class="js-gallery img-fluid d-block mx-auto mb-0" 
+														alt="Snow" 
+														data-new="./img/gallery/preview1.jpg" 
+														onclick="def(myImg)" />
 												</label>
 											</div>
 										</div>
@@ -613,9 +620,9 @@
 										</div>
 										<div class="col-lg-3 col-sm-6 col-12 p-3">
 											<div class="item">
-												<input id="15" name="answers_1[]" type="checkbox"
+												<input id="answer_a15" name="answers_1[]" type="checkbox"
 													value="Web-Development" class="required">
-												<label for="15" class="p-0">
+												<label for="answer_a15" class="p-0">
 													<img src="img/gallery/n11.jpg"
 														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
 												</label>
@@ -623,9 +630,9 @@
 										</div>
 										<div class="col-lg-3 col-sm-6 col-12 p-3">
 											<div class="item">
-												<input id="16" name="answers_1[]" type="checkbox"
+												<input id="answer_a16" name="answers_1[]" type="checkbox"
 													value="Web-Development" class="required">
-												<label for="16" class="p-0">
+												<label for="answer_a16" class="p-0">
 													<img src="img/gallery/n12.jpg"
 														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
 												</label>
@@ -633,9 +640,9 @@
 										</div>
 										<div class="col-lg-3 col-sm-6 col-12 p-3">
 											<div class="item">
-												<input id="17" name="answers_1[]" type="checkbox"
+												<input id="answer_a17" name="answers_1[]" type="checkbox"
 													value="Web-Development" class="required">
-												<label for="17" class="p-0">
+												<label for="answer_a17" class="p-0">
 													<img src="img/gallery/n13.jpg"
 														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
 												</label>
@@ -717,16 +724,6 @@
 													value="Web-Development" class="required">
 												<label for="answer_a25" class="p-0">
 													<img src="img/gallery/n21.jpg"
-														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
-												</label>
-											</div>
-										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-3">
-											<div class="item">
-												<input id="answer_a8" name="answers_1[]" type="checkbox"
-													value="Web-Development" class="required">
-												<label for="answer_a8" class="p-0">
-													<img src="img/gallery/n22.jpg"
 														class="js-gallery img-fluid d-block mx-auto mb-0" alt="" />
 												</label>
 											</div>
@@ -996,6 +993,14 @@
 	</div>
 	<!-- /Modal terms -->
 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+	<!-- End The Modal -->
+
 	<!-- COMMON SCRIPTS -->
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/common_scripts.min.js"></script>
@@ -1005,6 +1010,7 @@
 	<script src="js/uploadImage.js"></script>
 	<script src="js/select2.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="./js/popupImage.js"></script>
 
 	<script>
 		$(document).ready(function () {
