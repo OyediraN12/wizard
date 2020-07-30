@@ -71,14 +71,14 @@
 								<div class="col-lg-4">
 									<div class="item">
 										<input id="answer_1" type="radio" name="branch_1_group_1"
-											value="abudget" class="required">
+											value="Right_Packet" class="required">
 										<label for="answer_1"><img src="img/seo.png" alt="" style="width: 120px;"><strong>Right Paket</strong>Perfekt für den Anfänger </label>
 									</div>
 								</div>
 								<div class="col-lg-4">
 									<div class="item">
 										<input id="answer_2" name="branch_1_group_1" type="radio"
-											value="abudget" class="required">
+											value="Left_Packet" class="required">
 										<label for="answer_2"><img src="img/web.png"
 												alt="" style="width: 120px;"><strong>Left Paket</strong>Ideal für den Klein-, & Mittelstand </label>
 									</div>
@@ -87,22 +87,6 @@
 							<!-- /row-->
 						</div>
 						<!-- /First branch What Type of Project ============================== -->
-
-						<!-- Second branch Web-Development ============================== -->
-						
-						<!-- /Second branch Web-Development ============================== -->
-
-						<!-- Web-Development > HTML-Development ============================== -->
-						
-						<!-- /Web-Development > HTML-Development ============================== -->
-
-						<!-- Web-Development > CMS-Development ============================== -->
-						
-						<!-- /Web-Development > CMS-Development ============================== -->
-
-						<!-- Web-Development > FrontEnd-Development ============================== -->
-						
-						<!-- /Web-Development > FrontEnd-Development ============================== -->
 
 						<!-- Design > What Type of Design do you need ============================== -->
 						<div class="branch" id="Design">
@@ -148,8 +132,8 @@
 							
 							<!-- /Budget ============================== -->
 
-							<!-- Budget ============================== -->
-							<div class="branch" id="abudget">
+							<!-- Left_Packet ============================== -->
+							<div class="branch" id="Left_Packet">
 								<div class="step" data-state="a2budget">
 									<div class="question_title">
 										
@@ -224,7 +208,86 @@
 									<!-- /row -->
 								</div>
 							</div>
-							<!-- /Budget ============================== -->
+							<!-- /Left_Packet ============================== -->
+
+							<!-- Right_Packet ============================== -->
+							<div class="branch" id="Right_Packet">
+								<div class="step" data-state="a2budget">
+									<div class="question_title">
+										<h3>Plase fill with your details</h3>
+										<p>Ei duo homero postea dignissim.</p>
+									</div>
+									<div class="row justify-content-center">
+										<div class="col-lg-5">
+											<div class="box_general">
+												<div class="form-group add_bottom_30">
+													<div class="styled-select">
+														<select class="required" name="mr_mrs"> 
+															<option value="Mr" selected> Mr
+															</option>
+															<option value="Mrs">Mrs</option>
+															
+															
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<input type="text" name="name" class="required form-control"
+														placeholder="Name">
+												</div>
+												<div class="form-group">
+													<input type="text" name="nachname" class="required form-control"
+														placeholder="Nachname">
+												</div>
+												
+												<div class="form-group">
+													<input type="text" name="company_name" class="required form-control"
+														placeholder="company Name">
+												</div>
+												<div class="form-group">
+													<input type="email" name="email" class="required form-control"
+														placeholder="Email">
+												</div>
+												<div class="form-group">
+													<input type="text" name="phone" class="required form-control"
+														placeholder="Telefon">
+												</div>
+												
+												<div class="form-group add_bottom_30">
+													<div class="styled-select">
+														<select class="required" name="do_domain" do-domain>
+															<option value="0" selected="">Do you already have a domain?</option>
+															<option value="No">No</option>
+															<option value="Yes">Yes</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="form-group" style="display: none;" domain-name>
+													<input type="text" name="domain_name" class="form-control"
+														placeholder="Domain Name">
+												</div>
+
+												<div class="form-group" style="display: none;" domain-new>
+													<input type="text" name="no_domain" class="form-control"
+														placeholder="Please Specify Your Domain">
+												</div>
+												
+												
+												<div class="checkbox_questions">
+													<input name="terms" type="checkbox" class="icheck required"
+														value="yes">
+													<label>Please accept <a href="#" data-toggle="modal"
+															data-target="#terms-txt">terms and conditions</a>.</label>
+												</div>
+											</div>
+											<!-- /box_general -->
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+							</div>
+							<!-- /Right_Packet ============================== -->
 
 							<!-- Budget ============================== -->
 							<div class="branch" id="a2budget">
