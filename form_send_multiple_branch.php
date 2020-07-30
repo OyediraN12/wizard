@@ -103,6 +103,16 @@
 						$message .= "\nCountry: " . $_POST['country'];
 						$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
 
+						if (isset($_POST['website_1_answers']) && $_POST['website_1_answers'] != "")
+							{
+							$message.= "\Website Selected:\n";
+							foreach($_POST['website_1_answers'] as $value)
+								{
+								$message.= "-" . trim(stripslashes($value)) . "\n";
+								};
+								
+							}
+						
 						if (isset($_POST['menu_1_answers']) && $_POST['menu_1_answers'] != "")
 							{
 							$message.= "\nMenu Selected:\n";
