@@ -191,11 +191,25 @@
 														placeholder="Telefon">
 												</div>
 												
-												<div class="form-group">
+												<div class="form-group add_bottom_30">
+													<div class="styled-select">
+														<select class="required" name="do_domain" do-domain>
+															<option value="0" selected="">Do you already have a domain?</option>
+															<option value="No">No</option>
+															<option value="Yes">Yes</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="form-group" style="display: none;" domain-name>
 													<input type="text" name="domain_name" class="required form-control"
-														placeholder="Do you already have a domain?">
+														placeholder="Domain Name">
 												</div>
 
+												<div class="form-group" style="display: none;" domain-new>
+													<input type="text" name="domain_name" class="required form-control"
+														placeholder="Please Specify Your Domain">
+												</div>
 												
 												
 												<div class="checkbox_questions">
@@ -821,11 +835,24 @@
 		$('[data-fancybox="gallery"]').fancybox({
 			// Options will go here
 		});
-	</script>
-	<script>
+
+		$("[do-domain]").change(function(event){
+			var selected = $(this).val();
+			if(selected == "No"){
+				$("[domain-name]").hide();
+				$("[domain-new]").show();
+			}else if(selected == "Yes"){
+				$("[domain-name]").show();
+				$("[domain-new]").hide();
+			}else {
+				$("[domain-name]").hide();
+				$("[domain-new]").hide();
+			}
+		})
+
 		let gallery = document.querySelectorAll(".js-gallery");
 		gallery.forEach(element => {
-			console.log(element);
+			// console.log(element);
 		});
 	</script>
 </body>
