@@ -392,9 +392,9 @@ header {
   color: #0073e5 !important;
 }
 
-main {
+/* main {
   background: #f8f8f8 url(../img/pattern.svg) repeat;
-}
+} */
 main.plain {
   background: #f8f8f8;
 }
