@@ -44,10 +44,10 @@ Author URI: http://themeforest.net/user/Ansonika/
   left: 50%;
   margin-left: -25px;
   margin-top: -25px;
-  -webkit-animation: circle infinite .95s linear;
-  -moz-animation: circle infinite .95s linear;
-  -o-animation: circle infinite .95s linear;
-  animation: circle infinite .95s linear;
+  -webkit-animation: circle infinite 0.95s linear;
+  -moz-animation: circle infinite 0.95s linear;
+  -o-animation: circle infinite 0.95s linear;
+  animation: circle infinite 0.95s linear;
   border: 2px solid #1c5dab;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.2);
@@ -80,10 +80,10 @@ Author URI: http://themeforest.net/user/Ansonika/
   left: 50%;
   margin-left: -25px;
   margin-top: -25px;
-  -webkit-animation: circle infinite .95s linear;
-  -moz-animation: circle infinite .95s linear;
-  -o-animation: circle infinite .95s linear;
-  animation: circle infinite .95s linear;
+  -webkit-animation: circle infinite 0.95s linear;
+  -moz-animation: circle infinite 0.95s linear;
+  -o-animation: circle infinite 0.95s linear;
+  animation: circle infinite 0.95s linear;
   border: 2px solid #1c5dab;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.2);
@@ -296,7 +296,8 @@ a {
   transition: all 0.3s ease-in-out;
   outline: none;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #0073e5;
   text-decoration: none;
   outline: none;
@@ -357,7 +358,10 @@ header {
   text-indent: -9999px;
 }
 
-@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
   #logo_home h1 a {
     background-image: url(../img/logo_2x.png);
     background-size: 55px 35px;
@@ -392,16 +396,16 @@ header {
   color: #0073e5 !important;
 }
 
-/* main {
+main {
   background: #f8f8f8 url(../img/pattern.svg) repeat;
-} */
+}
 main.plain {
   background: #f8f8f8;
 }
 
 /* Footer */
 footer {
-  border-top: 1px solid #d9e1e6;
+  /* border-top: 1px solid #d9e1e6; */
   padding: 30px 0;
 }
 footer p {
@@ -562,24 +566,24 @@ footer ul li a:hover {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.item input[type=checkbox]:not(old),
-.item input[type=radio]:not(old) {
+.item input[type="checkbox"]:not(old),
+.item input[type="radio"]:not(old) {
   visibility: hidden;
 }
-.item input[type=checkbox]:not(old):checked + label,
-.item input[type=radio]:not(old):checked + label,
-.item input[type=checkbox]:not(old):checked + span + label,
-.item input[type=radio]:not(old):checked + span + label {
+.item input[type="checkbox"]:not(old):checked + label,
+.item input[type="radio"]:not(old):checked + label,
+.item input[type="checkbox"]:not(old):checked + span + label,
+.item input[type="radio"]:not(old):checked + span + label {
   display: block;
   border: 1px solid #acd373;
   -webkit-box-shadow: 0 2px 40px #e0e5f0;
   -moz-box-shadow: 0 2px 40px #e0e5f0;
   box-shadow: 0 2px 40px #e0e5f0;
 }
-.item input[type=checkbox]:not(old):checked + label:before,
-.item input[type=radio]:not(old):checked + label:before,
-.item input[type=checkbox]:not(old):checked + span + label:before,
-.item input[type=radio]:not(old):checked + span + label:before {
+.item input[type="checkbox"]:not(old):checked + label:before,
+.item input[type="radio"]:not(old):checked + label:before,
+.item input[type="checkbox"]:not(old):checked + span + label:before,
+.item input[type="radio"]:not(old):checked + span + label:before {
   font-family: "fontello";
   content: "\e81b";
   position: absolute;
@@ -589,16 +593,16 @@ footer ul li a:hover {
   font-size: 1.5rem;
   color: #acd373;
 }
-.item input[type=checkbox]:not(old):checked + label span,
-.item input[type=radio]:not(old):checked + label span,
-.item input[type=checkbox]:not(old):checked + span + label span,
-.item input[type=radio]:not(old):checked + span + label span {
+.item input[type="checkbox"]:not(old):checked + label span,
+.item input[type="radio"]:not(old):checked + label span,
+.item input[type="checkbox"]:not(old):checked + span + label span,
+.item input[type="radio"]:not(old):checked + span + label span {
   border: 4px solid #acd373;
 }
-.item input[type=checkbox]:not(old):checked + label figure img,
-.item input[type=radio]:not(old):checked + label figure img,
-.item input[type=checkbox]:not(old):checked + span + label figure img,
-.item input[type=radio]:not(old):checked + span + label figure img {
+.item input[type="checkbox"]:not(old):checked + label figure img,
+.item input[type="radio"]:not(old):checked + label figure img,
+.item input[type="checkbox"]:not(old):checked + span + label figure img,
+.item input[type="radio"]:not(old):checked + span + label figure img {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
   -moz-transform: translate(-50%, -50%) scale(1.2);
   -ms-transform: translate(-50%, -50%) scale(1.2);
@@ -650,10 +654,10 @@ button.submit {
   color: #fff;
   padding: 7px 20px;
   text-decoration: none;
-  transition: background .5s ease;
-  -moz-transition: background .5s ease;
-  -webkit-transition: background .5s ease;
-  -o-transition: background .5s ease;
+  transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
   display: inline-block;
   cursor: pointer;
   font-weight: 400;
@@ -687,7 +691,7 @@ button[disabled] {
 
 button.backward:before {
   content: "\34";
-  font-family: 'ElegantIcons';
+  font-family: "ElegantIcons";
   position: absolute;
   top: 8px;
   left: 12px;
@@ -696,7 +700,7 @@ button.backward:before {
 
 button.forward:before {
   content: "\35";
-  font-family: 'ElegantIcons';
+  font-family: "ElegantIcons";
   position: absolute;
   top: 8px;
   right: 10px;
@@ -705,7 +709,7 @@ button.forward:before {
 
 button.submit:before {
   content: "\4e";
-  font-family: 'ElegantIcons';
+  font-family: "ElegantIcons";
   position: absolute;
   top: 8px;
   right: 10px;
@@ -732,7 +736,7 @@ button.submit:before {
 }
 
 .ui-widget-header {
-  background: #6C3;
+  background: #6c3;
 }
 
 .ui-widget-header a {
@@ -1196,7 +1200,7 @@ span.error {
   padding: 6px 8px;
 }
 span.error:after {
-  content: '';
+  content: "";
   position: absolute;
   border-style: solid;
   border-width: 0 6px 6px 0;
@@ -1282,7 +1286,7 @@ input.qtyminus {
   color: #333;
 }
 .rs-tooltip-text:before {
-  content: '$';
+  content: "$";
 }
 
 /*** handle types ***/
@@ -1296,7 +1300,7 @@ input.qtyminus {
 
 /*** theming - colors ***/
 .rs-seperator {
-  border: 1px solid #AAAAAA;
+  border: 1px solid #aaaaaa;
 }
 
 .rs-border {
@@ -1312,7 +1316,7 @@ input.qtyminus {
 }
 
 .rs-bg-color {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .rs-handle {
@@ -1320,7 +1324,7 @@ input.qtyminus {
 }
 
 .rs-handle-dot {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .rs-handle-dot:after {
