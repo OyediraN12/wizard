@@ -41,66 +41,17 @@
 						$headers = "From: Quotation from STEPS <noreply@yourdomain.com>";
 						$message = "DETAILS\n";
 						$message .= "\nWhat Type of Project do you need: " . $_POST['branch_1_group_1'] . "\n";
-			
-						if (isset($_POST['branch_1_answers']) && $_POST['branch_1_answers'] != "")
-							{
-							$message.= "\nWhat Type of Seo Optimization do you need:\n";
-							foreach($_POST['branch_1_answers'] as $value)
-								{
-								$message.= "-" . trim(stripslashes($value)) . "\n";
-								};
-							}
 	
-						if (isset($_POST['branch_2_group_1']) && $_POST['branch_2_group_1'] != "")
-							{
-							$message.= "\nWhat Type of Web Development do you need: ". $_POST['branch_2_group_1'] . "\n\n";
-							
-							if (isset($_POST['branch_2_1_answers']) && $_POST['branch_2_1_answers'] != "")
-								{
-								foreach($_POST['branch_2_1_answers'] as $value)
-									{
-									$message.= "-" . trim(stripslashes($value)) . "\n";
-									};
-								$message .= "\nHome pages: " . $_POST['home_page'] . "\n";
-								$message .= "\nInner pages: " . $_POST['inner_pages'] . "\n";
-								$message .= "\nNotes: " . $_POST['html_development_notes'] . "\n";
-								}
-							
-							if (isset($_POST['branch_2_2_answers']) && $_POST['branch_2_2_answers'] != "")
-								{
-								foreach($_POST['branch_2_2_answers'] as $value)
-									{
-									$message.= "-" . trim(stripslashes($value)) . "\n";
-									};
-								$message .= "\nNotes: " . $_POST['cms_development_notes'] . "\n";
-								}
-							
-							if (isset($_POST['branch_2_3_answers']) && $_POST['branch_2_3_answers'] != "")
-								{
-								foreach($_POST['branch_2_3_answers'] as $value)
-									{
-									$message.= "-" . trim(stripslashes($value)) . "\n";
-									};
-									$message .= "\nNotes: " . $_POST['frontend_development_notes'] . "\n";
-								}
-							
-							}
-
-						if (isset($_POST['branch_3_answers']) && $_POST['branch_3_answers'] != "")
-							{
-							$message.= "\nWhat Type of Design do you need:\n";
-							foreach($_POST['branch_3_answers'] as $value)
-								{
-								$message.= "-" . trim(stripslashes($value)) . "\n";
-								};
-							}
-	
-						$message .= "\nWhat is your Budget: " . $_POST['budget_slider']. "$". "\n";
 						$message .= "\nPERSONAL DETAILS\n" ;
-						$message .= "\nName and Lastname: " . $_POST['first_last_name'];
+						$message .= "\nMr/Mrs: " . $_POST['mr_mrs'];
+						$message .= "\nName: " . $_POST['name'];
+						$message .= "\nNachname: " . $_POST['nachname'];
+						$message .= "\nCompany_name: " . $_POST['company_name'];
 						$message .= "\nEmail: " . $_POST['email'];
-						$message .= "\nTelephone " . $_POST['telephone'];
-						$message .= "\nCountry: " . $_POST['country'];
+						$message .= "\nTelephone " . $_POST['phone'];
+						$message .= "\nDo_Domain: " . $_POST['do_domain'];
+						$message .= "\nDomain_Name: " . $_POST['domain_name'];
+						$message .= "\nNo_Domain: " . $_POST['no_domain'];
 						$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
 
 						if (isset($_POST['website_1_answers']) && $_POST['website_1_answers'] != "")
@@ -156,11 +107,6 @@
 									} 
 								}
 							}
-							// foreach($_POST['pictures_upload'] as $value)
-							// 	{
-							// 	$message.= "\nsdsdsdsd:\n";
-
-							// 	};
 								
 							}
 						
