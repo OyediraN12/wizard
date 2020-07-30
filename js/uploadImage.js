@@ -19,7 +19,7 @@ window.onload = function () {
                         dvPreview.appendChild(img);
                     }
                     reader.readAsDataURL(file);
-                } else {
+            } else {
                     console.log(file.name + " is not a valid image file.");
                     dvPreview.innerHTML = "";
                     return false;
