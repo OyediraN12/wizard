@@ -710,10 +710,11 @@
 													value="Sunny" onclick="menuSelected(check6)" ">
 												<label id="check6">Sunny</label>
 											</div>
-											<div class="form-group">
-												<input type="text" name="menu_other" class="form-control"
-													placeholder="What other menu would you like? " value="">
+											<div id="bottom-wizard">
+												<button type="button" class="btn btn-default" new-line>New Menu</button>
+												<button type="button" class="btn btn-danger" remove-line>Remove Menu</button>
 											</div>
+											<div new-menu></div>
 
 										</div>
 										<!-- /box_general -->
@@ -958,6 +959,10 @@
 														</div>
 													</div>
 												</div>
+												<!---end of card div -->
+												<div new-card>
+
+												</div>
 											</div>
 										</div>
 										<!-- /box_general -->
@@ -1143,7 +1148,116 @@
 			var total_check = $(".siteMenu:checkbox:checked").length;
 			$("#selected_message").html(`You Selected ${total_check} Menu`);
 		}
+
+		/**
+		Add and remove of menu
+		**/
+		var count = 0;
+  
+		var collapsible = `
+		<div class="card"  Sunny>
+			<div class="card-header" id="headingSix">
+				<h2 class="mb-0">
+					<button class="btn btn-link collapsed" type="button"
+						data-toggle="collapse" data-target="#collapse_new${count}"
+						aria-expanded="false" aria-controls="collapse_new${count}">
+						Sunny
+					</button>
+				</h2>
+			</div>
+			<div id="collapse_new${count}" class="collapse"
+				aria-labelledby="headingOne" data-parent="#accordionExample">
+				<div class="card-body">
+					<textarea class="form-control" rows="8" cols="40"
+						id="comment" placeholder="Enter text here"></textarea>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Upload Pictures
+								here</span>
+						</div>
+						<div class="custom-file">
+							<input id="fileupload" type="file"
+								multiple="multiple" name="files[]"
+								class="custom-file-input">
+							<label class="custom-file-label"
+								for="inputGroupFile01"></label>
+						</div>
+					</div>
+					<hr />
+					<b>Live Preview</b>
+					<br />
+					<br />
+					<div id="dvPreview">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---end of card div -->
+		`;
+		$("[new-line]").click(function() {
+			count = count + 1;
+			$('[new-menu]').append(`
+			<div class="form-group input-group mb-3" id="row_${count}" other-menu>
+				<input type="text" class="form-control" placeholder="What other menu would you like?" name="menu_1_answers[]"
+				id="menu_new${count}" selected-text-box>
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon1"><input type="checkbox" name="record"></span>
+				</div>
+			</div>
+			`)
+			$('[new-card]').append(`<div class="card"  menu_new${count}>
+			<div class="card-header" id="headingSix">
+				<h2 class="mb-0">
+					<button class="btn btn-link collapsed" type="button"
+						data-toggle="collapse" data-target="#collapse_new${count}"
+						aria-expanded="false" aria-controls="collapse_new${count}">
+						Sunny
+					</button>
+				</h2>
+			</div>
+			<div id="collapse_new${count}" class="collapse"
+				aria-labelledby="headingOne" data-parent="#accordionExample">
+				<div class="card-body">
+					<textarea class="form-control" rows="8" cols="40"
+						id="comment" placeholder="Enter text here"></textarea>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Upload Pictures
+								here</span>
+						</div>
+						<div class="custom-file">
+							<input id="fileupload" type="file"
+								multiple="multiple" name="files[]"
+								class="custom-file-input">
+							<label class="custom-file-label"
+								for="inputGroupFile01"></label>
+						</div>
+					</div>
+					<hr />
+					<b>Live Preview</b>
+					<br />
+					<br />
+					<div id="dvPreview">
+					</div>
+				</div>
+			</div>
+		</div>`);
+		});
+
+		$("[remove-line]").click(function(){
+          $('input[name="record"]').each(function(){
+            if($(this).is(":checked")){
+				var parent_div = $(this).parents("[other-menu]");
+        		var input = parent_div.find( "[selected-text-box]:input" );
+				var input_id = input.attr('id');
+				console.log($(this).parents('input:text'));
+                  $(this).parents('[other-menu]').remove();
+				  $('#'+input_id).remove();
+              }
+          });
+      })
 	</script>
+	
 </body>
 
 </html>
