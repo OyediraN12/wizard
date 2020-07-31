@@ -676,36 +676,37 @@
 												<input type="text" name="" class="form-control"
 													placeholder="Select your Menu" disabled>
 											</div>
+
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="Start">
-												<label>Start</label>
+												<input id="check1" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Start" onclick="menuSelected(check1)">
+												<label id="check1">Start</label>
 											</div>
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="About Us">
-												<label>About Us</label>
+												<input id="check2" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="About Us" onclick="menuSelected(check2)">
+												<label id="check2">About Us</label>
 											</div>
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="Services">
-												<label>Services</label>
+												<input id="check3" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Services" onclick="menuSelected(check3)">
+												<label id="check3">Services</label>
 											</div>
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="Gallery References">
-												<label>Gallery References</label>
+												<input id="check4" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Gallery References" onclick="menuSelected(check4)">
+												<label id="check4">Gallery References</label>
 											</div>
 
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="Contact">
-												<label>Contact</label>
+												<input id="check5" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Contact" onclick="menuSelected(check5)">
+												<label id="check5">Contact</label>
 											</div>
 											<div class="checkbox_questions">
-												<input name="menu_1_answers[]" type="checkbox" class="icheck required"
-													value="Sunny">
-												<label>Sunny</label>
+												<input id="check6" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Sunny" onclick="menuSelected(check6)">
+												<label id="check6">Sunny</label>
 											</div>
 											<div class="form-group">
 												<input type="text" name="menu_other" class="form-control"
@@ -725,13 +726,14 @@
 								<div class="question_title">
 									<h3>Upload Pictures</h3>
 									<p>Ei duo homero postea dignissim.</p>
+									<p id="selected_message"></p>
 								</div>
 								<div class="row justify-content-center">
 									<div class="col-lg-9">
 										<div class="box_general">
 											<!-- here goes the collapse  -->
 											<div class="accordion" id="accordionExample">
-												<div class="card">
+												<div class="card" style="display: none;" Start>
 													<div class="card-header" id="headingOne">
 														<h2 class="mb-0">
 															<button class="btn btn-link" type="button"
@@ -769,7 +771,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="card">
+												<div class="card" style="display: none;" About-Us>
 													<div class="card-header" id="headingTwo">
 														<h2 class="mb-0">
 															<button class="btn btn-link collapsed" type="button"
@@ -788,7 +790,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="card">
+												<div class="card" style="display: none;" Services>
 													<div class="card-header" id="headingThree">
 														<h2 class="mb-0">
 															<button class="btn btn-link collapsed" type="button"
@@ -806,7 +808,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="card">
+												<div class="card" style="display: none;" Gallery_References>
 													<div class="card-header" id="headingThree">
 														<h2 class="mb-0">
 															<button class="btn btn-link collapsed" type="button"
@@ -824,7 +826,25 @@
 														</div>
 													</div>
 												</div>
-												<div class="card">
+												<div class="card" style="display: none;" Contact>
+													<div class="card-header" id="headingFour">
+														<h2 class="mb-0">
+															<button class="btn btn-link collapsed" type="button"
+																data-toggle="collapse" data-target="#collapseFour"
+																aria-expanded="false" aria-controls="collapseFour">
+																kontakt
+															</button>
+														</h2>
+													</div>
+													<div id="collapseFour" class="collapse"
+														aria-labelledby="headingFour" data-parent="#accordionExample">
+														<div class="card-body">
+															Anim pariatur cliche reprehenderit, enim eiusmod high life
+															a
+														</div>
+													</div>
+												</div>
+												<div class="card" style="display: none;" Sunny>
 													<div class="card-header" id="headingFour">
 														<h2 class="mb-0">
 															<button class="btn btn-link collapsed" type="button"
@@ -946,11 +966,16 @@
 	<script>
 		$(document).ready(function () {
 			$('.js-example-basic-multiple').select2();
+
+			
+			
 		});
 
 		$('[data-fancybox="gallery"]').fancybox({
 			// Options will go here
 		});
+
+
 
 		$("[do-domain]").change(function (event) {
 			var selected = $(this).val();
@@ -982,6 +1007,45 @@
 				if (checkedChecks.length >= max + 1)
 					return false;
 			}
+		}
+
+		/**
+		 * for menu selected - start, about, us
+		 * Store in localstorage
+		 **/
+
+		var num = 0;
+
+		function menuSelected(menuCheckboxId){
+			var checkval = menuCheckboxId.value;
+			$(menuCheckboxId).change(function(){
+            if($(this).is(":checked")){
+				localStorage.setItem(checkval, '1');
+				if(checkval == "Start") $("[Start]").show();
+				if(checkval == "About Us") $("[About-Us]").show();
+				if(checkval == "Services") $("[Services]").show();
+				if(checkval == "Gallery References") $("[Gallery_References]").show();
+				if(checkval == "Contact") $("[Contact]").show();
+				if(checkval == "Sunny") $("[Sunny]").show();
+				checkboxCounter();
+            }
+            else if($(this).is(":not(:checked)")){
+				localStorage.removeItem(checkval);
+				if(checkval == "Start") $("[Start]").hide();
+				if(checkval == "About Us") $("[About-Us]").hide();
+				if(checkval == "Services") $("[Services]").hide();
+				if(checkval == "Gallery References") $("[Gallery_References]").hide();
+				if(checkval == "Contact") $("[Contact]").hide();
+				if(checkval == "Sunny") $("[Sunny]").hide();
+				checkboxCounter();
+			}
+        });
+		}
+
+		function checkboxCounter()
+		{
+			var total_check = $(".siteMenu:checkbox:checked").length;
+			$("#selected_message").html(`You Selected ${total_check} Menu`);
 		}
 	</script>
 </body>

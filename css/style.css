@@ -566,7 +566,7 @@ footer ul li a:hover {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* .item input[type="checkbox"]:not(old), */
+.item input[type="checkbox"]:not(old),
 .item input[type="radio"]:not(old) {
   visibility: hidden;
   /* display : none; */
@@ -608,9 +608,9 @@ footer ul li a:hover {
   height: 40px;
 }
 
-.item input[type="checkbox"]:not(old) {
+/* .item input[type="checkbox"]:not(old) {
   display: none;
-}
+} */
 
 .item input[type="checkbox"]:not(old):checked + label,
 .item input[type="checkbox"]:not(old):checked + span + label {
