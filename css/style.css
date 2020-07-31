@@ -509,6 +509,7 @@ footer ul li a:hover {
 .item label img {
   display: block;
   margin: 0 auto 15px;
+  
 }
 @media (max-width: 767px) {
   .item label img {
