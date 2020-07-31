@@ -509,6 +509,7 @@ footer ul li a:hover {
 .item label img {
   display: block;
   margin: 0 auto 15px;
+  
 }
 @media (max-width: 767px) {
   .item label img {
@@ -589,7 +590,7 @@ footer ul li a:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
   display: block;
-  background-color: #fff;
+  background-color:#559922;
   padding: 45px;
   text-align: center;
   margin-bottom: 0;
@@ -602,7 +603,7 @@ footer ul li a:hover {
   border: 1px solid #d9e1e6;
   font-size: 15px;
   font-size: 0.9375rem;
-  color: #777;
+  color: white;
   cursor: pointer;
   /* added */
   height: 40px;
@@ -616,7 +617,7 @@ footer ul li a:hover {
 .item input[type="checkbox"]:not(old):checked + span + label {
   display: block;
   border: 1px solid #d3d3d3;
-  background-color: #d3d3d3;
+  background-color: #225522;
   -webkit-box-shadow: 0 2px 40px #e0e5f0;
   -moz-box-shadow: 0 2px 40px #e0e5f0;
   box-shadow: 0 2px 40px #e0e5f0;
@@ -632,13 +633,13 @@ footer ul li a:hover {
 .item input[type="checkbox"]:not(old):checked + span + label:before,
 .item input[type="radio"]:not(old):checked + span + label:before {
   font-family: "fontello";
-  content: "\e81b";
+  content: "\e81a";
   position: absolute;
-  right: 20px;
-  top: 10px;
+  right: 22px;
+  top: 3px;
   font-size: 24px;
   font-size: 1.5rem;
-  color: #acd373;
+  color: black;
 }
 .item input[type="checkbox"]:not(old):checked + label span,
 .item input[type="radio"]:not(old):checked + label span,
