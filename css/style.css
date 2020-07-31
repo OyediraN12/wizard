@@ -568,7 +568,8 @@ footer ul li a:hover {
 }
 .item input[type="checkbox"]:not(old),
 .item input[type="radio"]:not(old) {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display : none;
 }
 /* .item input[type="checkbox"]:not(old):checked + label, */
 .item input[type="radio"]:not(old):checked + label,
