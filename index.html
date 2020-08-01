@@ -675,6 +675,7 @@
 											</div>
 										</div>
 									</div>
+									<p id="gallery_selected_message" class="text-center mt-3"></p>
 								</div>
 							</div>
 							<!-- /Budget ============================== -->
@@ -773,9 +774,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload1" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload1, dvPreview1)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -784,7 +785,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview1">
 															</div>
 														</div>
 													</div>
@@ -810,9 +811,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload2" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload2, dvPreview2)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -821,7 +822,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview2">
 															</div>
 														</div>
 													</div>
@@ -847,9 +848,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload3" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload3, dvPreview3)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -858,7 +859,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview3">
 															</div>
 														</div>
 													</div>
@@ -884,9 +885,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload4" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload4, dvPreview4)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -895,7 +896,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview4">
 															</div>
 														</div>
 													</div>
@@ -921,9 +922,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload5" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload5, dvPreview5)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -932,7 +933,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview5">
 															</div>
 														</div>
 													</div>
@@ -958,9 +959,9 @@
 																		here</span>
 																</div>
 																<div class="custom-file">
-																	<input id="fileupload" type="file"
+																	<input id="fileupload6" type="file"
 																		multiple="multiple" name="files[]"
-																		class="custom-file-input">
+																		class="custom-file-input" onclick="antman(fileupload6, dvPreview6)">
 																	<label class="custom-file-label"
 																		for="inputGroupFile01"></label>
 																</div>
@@ -969,7 +970,7 @@
 															<b>Live Preview</b>
 															<br />
 															<br />
-															<div id="dvPreview">
+															<div id="dvPreview6">
 															</div>
 														</div>
 													</div>
@@ -1078,6 +1079,9 @@
 	<script src="js/select2.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="./js/popupImage.js"></script>
+	<script src="./js/do_domain_option.js"></script>
+	<script src="./js/gallery_selector.js"></script>
+	<script src="./js/menu_selected.js"></script>
 
 	<script>
 		$(document).ready(function () {
@@ -1093,122 +1097,11 @@
 
 
 
-		$("[do-domain]").change(function (event) {
-			var selected = $(this).val();
-			if (selected == "No") {
-				$("[domain-name]").hide();
-				$("[domain-new]").show();
-			} else if (selected == "Yes") {
-				$("[domain-name]").show();
-				$("[domain-new]").hide();
-			} else {
-				$("[domain-name]").hide();
-				$("[domain-new]").hide();
-			}
-		})
-
-		let gallery = document.querySelectorAll(".js-gallery");
-		gallery.forEach(element => {
-			// console.log(element);
-		});
-
-		// reduce check to 5
-		let checks = document.querySelectorAll(".check");
-		var max = 5;
-		for (var i = 0; i < checks.length; i++) {
-			checks[i].onclick = selectiveCheck;
-
-			function selectiveCheck(event) {
-				var checkedChecks = document.querySelectorAll(".check:checked");
-				if (checkedChecks.length >= max + 1)
-					return false;
-			}
-		}
-
-		/**
-		 * for menu selected - start, about, us
-		 * Store in localstorage
-		 **/
-
-		var num = 0;
-
-		function menuSelected(menuCheckboxId){
-			var checkval = menuCheckboxId.value;
-			$(menuCheckboxId).change(function(){
-            if($(this).is(":checked")){
-				localStorage.setItem(checkval, '1');
-				if(checkval == "Start") $("[Start]").show();
-				if(checkval == "About Us") $("[About-Us]").show();
-				if(checkval == "Services") $("[Services]").show();
-				if(checkval == "Gallery References") $("[Gallery_References]").show();
-				if(checkval == "Contact") $("[Contact]").show();
-				if(checkval == "Sunny") $("[Sunny]").show();
-				checkboxCounter();
-            }
-            else if($(this).is(":not(:checked)")){
-				localStorage.removeItem(checkval);
-				if(checkval == "Start") $("[Start]").hide();
-				if(checkval == "About Us") $("[About-Us]").hide();
-				if(checkval == "Services") $("[Services]").hide();
-				if(checkval == "Gallery References") $("[Gallery_References]").hide();
-				if(checkval == "Contact") $("[Contact]").hide();
-				if(checkval == "Sunny") $("[Sunny]").hide();
-				checkboxCounter();
-			}
-        });
-		}
-
-		function checkboxCounter()
-		{
-			var total_check = $(".siteMenu:checkbox:checked").length;
-			$("#selected_message").html(`You Selected ${total_check} Menu`);
-		}
-
 		/**
 		Add and remove of menu
 		**/
 		var count = 0;
   
-		var collapsible = `
-		<div class="card"  Sunny>
-			<div class="card-header" id="headingSix">
-				<h2 class="mb-0">
-					<button class="btn btn-link collapsed" type="button"
-						data-toggle="collapse" data-target="#collapse_new${count}"
-						aria-expanded="false" aria-controls="collapse_new${count}">
-						Sunny
-					</button>
-				</h2>
-			</div>
-			<div id="collapse_new${count}" class="collapse"
-				aria-labelledby="headingOne" data-parent="#accordionExample">
-				<div class="card-body">
-					<textarea class="form-control" rows="8" cols="40"
-						id="comment" placeholder="Enter text here"></textarea>
-					<div class="input-group mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text">Upload Pictures
-								here</span>
-						</div>
-						<div class="custom-file">
-							<input id="fileupload" type="file"
-								multiple="multiple" name="files[]"
-								class="custom-file-input">
-							<label class="custom-file-label"
-								for="inputGroupFile01"></label>
-						</div>
-					</div>
-					<hr />
-					<b>Live Preview</b>
-					<br />
-					<br />
-					<div id="dvPreview">
-					</div>
-				</div>
-			</div>
-		</div>
-		<!---end of card div -->
-		`;
 		$("[new-line]").click(function() {
 			count = count + 1;
 			$('[new-menu]').append(`
@@ -1220,61 +1113,70 @@
 				</div>
 			</div>
 			`)
+
+			/**
+			 * Add new card with upload
+			 * **/
 			$('[new-card]').append(`<div class="card"  menu_new${count}>
-			<div class="card-header" id="headingSix">
-				<h2 class="mb-0">
-					<button class="btn btn-link collapsed" type="button"
-						data-toggle="collapse" data-target="#collapse_new${count}"
-						aria-expanded="false" aria-controls="collapse_new${count}">
-						Sunny
-					</button>
-				</h2>
-			</div>
-			<div id="collapse_new${count}" class="collapse"
-				aria-labelledby="headingOne" data-parent="#accordionExample">
-				<div class="card-body">
-					<textarea class="form-control" rows="8" cols="40"
-						id="comment" placeholder="Enter text here"></textarea>
-					<div class="input-group mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text">Upload Pictures
-								here</span>
+				<div class="card-header" id="headingSix">
+					<h2 class="mb-0">
+						<button class="btn btn-link collapsed" type="button"
+							data-toggle="collapse" data-target="#collapse_new${count}"
+							aria-expanded="false" aria-controls="collapse_new${count}">
+							Menu Title
+						</button>
+					</h2>
+				</div>
+				<div id="collapse_new${count}" class="collapse"
+					aria-labelledby="headingOne" data-parent="#accordionExample">
+					<div class="card-body">
+						<textarea class="form-control" rows="8" cols="40"
+							id="comment" placeholder="Enter text here"></textarea>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Upload Pictures
+									here</span>
+							</div>
+							<div class="custom-file">
+								<input id="fileupload_${count}" type="file"
+									multiple="multiple" name="files[]"
+									class="custom-file-input" onclick="antman(fileupload_${count}, dvPreview_${count})">
+								<label class="custom-file-label"
+									for="inputGroupFile01"></label>
+							</div>
 						</div>
-						<div class="custom-file">
-							<input id="fileupload" type="file"
-								multiple="multiple" name="files[]"
-								class="custom-file-input">
-							<label class="custom-file-label"
-								for="inputGroupFile01"></label>
+						<hr />
+						<b>Live Preview</b>
+						<br />
+						<br />
+						<div id="dvPreview_${count}">
 						</div>
-					</div>
-					<hr />
-					<b>Live Preview</b>
-					<br />
-					<br />
-					<div id="dvPreview">
 					</div>
 				</div>
-			</div>
-		</div>`);
+			</div>`);
+
+			/**
+			 * Replace menu button value
+			 **/
+			$("[selected-text-box]:input").keyup(function(e) {
+				var input_id = $(this).attr('id');
+				var input_value = $(this).val();
+				$('[new-card]').find( '[' + input_id + ']' ).find('button').html(input_value);
+			})
 		
 		});
 
 		$("[remove-line]").click(function(){
           $('input[name="record"]').each(function(){
             if($(this).is(":checked")){
-				var parent_div = $(this).parents("[other-menu]");
-        		var input = parent_div.find( "[selected-text-box]:input" );
-				var input_id = input.attr('id');
-				console.log(input_id);
-				console.log($(this).parents('input:text'));
+				var input_id = $(this).parents("[other-menu]").find( "[selected-text-box]:input" ).attr('id');
                 $(this).parents('[other-menu]').remove();
-				var parent_div1 = $('[new-card]');
-				var input1 = parent_div1.find( '[' + input_id + ']' ).remove();
-				// console.log(input1);
+				$('[new-card]').find( '[' + input_id + ']' ).remove();
               }
           });
       })
+
+
 	</script>
 	
 </body>
