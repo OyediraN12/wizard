@@ -23,6 +23,17 @@ Author URI: http://themeforest.net/user/Ansonika/
 /*============================================================================================*/
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
+
+/* for label input */
+.like{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2.0rem;
+  line-height: 1.8;
+  font-weight: 300;
+  font-stretch: 10px;
+  
+}
+
 /*-------- Preloader --------*/
 #preloader {
   position: fixed;
@@ -628,19 +639,34 @@ footer ul li a:hover {
 
 
 
-.item input[type="checkbox"]:not(old):checked + label:before,
+
 .item input[type="radio"]:not(old):checked + label:before,
-.item input[type="checkbox"]:not(old):checked + span + label:before,
+
 .item input[type="radio"]:not(old):checked + span + label:before {
+  font-family: "fontello";
+  content: "\e81c";
+  position: absolute;
+  right: 22px;
+  top: 10px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #559922 ;
+}
+
+.item input[type="checkbox"]:not(old):checked + label:before,
+
+.item input[type="checkbox"]:not(old):checked + span + label:before
+ {
   font-family: "fontello";
   content: "\e81a";
   position: absolute;
   right: 22px;
-  top: 3px;
-  font-size: 24px;
+  top: 0px;
+  font-size: 10px;
   font-size: 1.5rem;
-  color: black;
+  color: #ffff ;
 }
+
 .item input[type="checkbox"]:not(old):checked + label span,
 .item input[type="radio"]:not(old):checked + label span,
 .item input[type="checkbox"]:not(old):checked + span + label span,
