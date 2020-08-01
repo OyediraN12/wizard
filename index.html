@@ -1243,6 +1243,7 @@
 				</div>
 			</div>
 		</div>`);
+		
 		});
 
 		$("[remove-line]").click(function(){
@@ -1251,9 +1252,12 @@
 				var parent_div = $(this).parents("[other-menu]");
         		var input = parent_div.find( "[selected-text-box]:input" );
 				var input_id = input.attr('id');
+				console.log(input_id);
 				console.log($(this).parents('input:text'));
-                  $(this).parents('[other-menu]').remove();
-				  $('#'+input_id).remove();
+                $(this).parents('[other-menu]').remove();
+				var parent_div1 = $('[new-card]');
+				var input1 = parent_div1.find( '[' + input_id + ']' ).remove();
+				// console.log(input1);
               }
           });
       })
