@@ -23,6 +23,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 /*============================================================================================*/
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
+/*  for the form */
 
 /* for label input */
 .like{
@@ -710,6 +711,7 @@ footer ul li a:hover {
     padding: 30px;
   }
 }
+
 
 input#website {
   display: none;
