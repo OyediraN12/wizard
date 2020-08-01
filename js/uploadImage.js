@@ -1,8 +1,6 @@
-window.onload = function () {
-    var fileUpload = document.getElementById("fileupload");
+function antman(fileUpload, dvPreview) {
     fileUpload.onchange = function () {
         if (typeof (FileReader) != "undefined") {
-            var dvPreview = document.getElementById("dvPreview");
             dvPreview.innerHTML = "";
             var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
             for (var i = 0; i < fileUpload.files.length; i++) {
