@@ -18,6 +18,9 @@
 	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
 		href="img/apple-touch-icon-144x144-precomposed.png">
 
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- GOOGLE WEB FONT -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
@@ -179,7 +182,7 @@
 													  	placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="number" name="phone" class="required form-control"
+													<input type="number"  name="phone" class="required form-control"
 														placeholder="Telefon">
 												</div>
 
@@ -204,12 +207,12 @@
 												</div>
 
 												<div class="form-group" style="display: none;" domain-name>
-													<input type="text" name="domain_name" class="form-control"
+													<input type="url" name="domain_name" class="form-control"
 														placeholder="Domain Name">
 												</div>
 
 												<div class="form-group" style="display: none;" domain-new>
-													<input type="text" name="no_domain" class="form-control"
+													<input type="url" name="no_domain" class="form-control"
 														placeholder="Please Specify Your Domain">
 												</div>
 
@@ -273,7 +276,7 @@
 														placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="number" name="phone" class="required form-control"
+													<input type="number"  name="phone" class="required form-control"
 														placeholder="Telefon">
 												</div>
 
@@ -298,12 +301,12 @@
 												</div>
 
 												<div class="form-group" style="display: none;" domain-name>
-													<input type="text" name="domain_name" class="form-control"
+													<input type="url" name="domain_name" class="form-control"
 														placeholder="Domain Name">
 												</div>
 
 												<div class="form-group" style="display: none;" domain-new>
-													<input type="text" name="no_domain" class="form-control"
+													<input type="url" name="no_domain" class="form-control"
 														placeholder="Please Specify Your Domain">
 												</div>
 
@@ -730,8 +733,18 @@
 												<button type="button" class="btn btn-default" new-line> <img src="./img/plus.png" alt="" > New Menu</button>
 												<button type="button" class="btn btn-danger" remove-line>Remove Menu</button>
 											</div>
-											<div new-menu></div>
+											
+											  
+											<div class="input-group mb-2 mr-sm-2">
+												
+												<input type="text" class="form-control" placeholder="Input menu">
+												<div class="input-group-prepend">
+													<div class="input-group-text">X</div>
+												  </div>
+												  
+											</div>
 
+												
 										</div>
 										<!-- /box_general -->
 									</div>
