@@ -726,25 +726,16 @@
 											</div>
 											<div class="checkbox_questions">
 												<input id="check6" name="menu_1_answers[]" type="checkbox" class="siteMenu"
-													value="Sunny" onclick="menuSelected(check6)" ">
+													value="Sunny" onclick="menuSelected(check6)">
 												<label id="check6">Sunny</label>
 											</div>
-											<div id="bottom-wizard">
-												<button type="button" class="btn btn-default" new-line> <img src="./img/plus.png" alt="" > New Menu</button>
-												<button type="button" class="btn btn-danger" remove-line>Remove Menu</button>
+											
+											<div class="mt-4" new-menu >
+												
 											</div>
 											
-											  
-											<div class="input-group mb-2 mr-sm-2">
-												
-												<input type="text" class="form-control" placeholder="Input menu">
-												<div class="input-group-prepend">
-													<div class="input-group-text">X</div>
-												  </div>
-												  
-											</div>
-
-												
+											<button type="button" class="btn btn-default btn-sm" new-line> 
+												<img src="./img/plus.png" alt="" > New Menu</button>
 										</div>
 										<!-- /box_general -->
 									</div>
@@ -1119,11 +1110,11 @@
 			count = count + 1;
 			$('[new-menu]').append(`
 			<div class="form-group input-group mb-3" id="row_${count}" other-menu>
-				<input type="text" class="form-control" placeholder="What other menu would you like?" name="menu_1_answers[]"
+				<input type="text" class="form-control" placeholder="Input Menu" name="menu_1_answers[]"
 				id="menu_new${count}" selected-text-box>
-				<div class="input-group-append">
-					<span class="input-group-text" id="basic-addon1"><input type="checkbox" name="record"></span>
-				</div>
+				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})">
+						X
+				</span>
 			</div>
 			`)
 
@@ -1179,15 +1170,12 @@
 		
 		});
 
-		$("[remove-line]").click(function(){
-          $('input[name="record"]').each(function(){
-            if($(this).is(":checked")){
-				var input_id = $(this).parents("[other-menu]").find( "[selected-text-box]:input" ).attr('id');
-                $(this).parents('[other-menu]').remove();
-				$('[new-card]').find( '[' + input_id + ']' ).remove();
-              }
-          });
-      })
+		function removeLine(elemId) {
+			var input_id = $(elemId).parents("[other-menu]").find( "[selected-text-box]:input" ).attr('id');
+			$(elemId).parents('[other-menu]').remove();
+			$('[new-card]').find( '[' + input_id + ']' ).remove();
+		}
+
 
 
 	</script>
