@@ -29,11 +29,11 @@
 	<!-- YOUR CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
     
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
     function delayedRedirect(){
         window.location = "index.html"
     }
-    </script>
+    </script> -->
 
 </head>
 <body style="background:#f8f8f8 url(img/pattern.svg) repeat;" onLoad="setTimeout('delayedRedirect()', 5000)">
