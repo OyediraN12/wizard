@@ -13,7 +13,7 @@ let gallery = document.querySelectorAll(".js-gallery");
 				var checkedChecks = document.querySelectorAll(".check:checked");
                 var totalChecked = checkedChecks.length;
                 if(totalChecked > 5 ){
-                    $("#gallery_selected_message").html(`Maximum is 5 Selected`);
+                    $("#gallery_selected_message").html(`<span class="text-danger">Maximum is 5 Selected</span>`);
                 }else {
                     $("#gallery_selected_message").html(`You Selected ${totalChecked} Gallery`)
                 }
