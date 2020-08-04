@@ -1,3 +1,7 @@
+<?php 
+    //require database module
+    require_once './database/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +29,11 @@
 	<!-- YOUR CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
     
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
     function delayedRedirect(){
         window.location = "index.html"
     }
-    </script> -->
+    </script>
 
 </head>
 <body style="background:#f8f8f8 url(img/pattern.svg) repeat;" onLoad="setTimeout('delayedRedirect()', 5000)">
@@ -44,37 +48,71 @@
 	
 						$message .= "\nPERSONAL DETAILS\n" ;
 						$message .= "\nMr/Mrs: " . $_POST['mr_mrs'];
-						$message .= "\nName: " . $_POST['name'];
-						$message .= "\nNachname: " . $_POST['nachname'];
+						$message .= "\nName: " . $_POST['firstname'];
+						$message .= "\nNachname: " . $_POST['lastname'];
 						$message .= "\nCompany_name: " . $_POST['company_name'];
 						$message .= "\nEmail: " . $_POST['email'];
 						$message .= "\nTelephone " . $_POST['phone'];
-						$message .= "\nDo_Domain: " . $_POST['do_domain'];
+						$message .= "\nHave_Domain: " . $_POST['have_domain'];
 						$message .= "\nDomain_Name: " . $_POST['domain_name'];
-						$message .= "\nNo_Domain: " . $_POST['no_domain'];
 						$message .= "\nTerms and conditions accepted: " . $_POST['terms'] . "\n";
+						
+						// information that will be send to database 
+						$project_name = $_POST['branch_1_group_1'];
+
+						$personal_info = (object) [   
+							"Mr/Mrs" => $_POST['mr_mrs'], 
+							"name" => $_POST['firstname'],
+							"nachname" => $_POST['lastname'],
+							"company_name" => $_POST['company_name'],
+							"email" => $_POST['email'],
+							"phone" => $_POST['phone'],
+							"have_domain" => $_POST['have_domain'],
+							"domain_name" => $_POST['domain_name']
+						];
+
+						$personal_info =  json_encode($personal_info);
+
+						$message.= $personal_info;
+
+						$websites = [];
 
 						if (isset($_POST['website_1_answers']) && $_POST['website_1_answers'] != "")
 							{
 							$message.= "\Website Selected:\n";
 							foreach($_POST['website_1_answers'] as $value)
 								{
-								$message.= "-" . trim(stripslashes($value)) . "\n";
+								$trim_value = trim(stripslashes($value));
+								array_push($websites, $trim_value);
+								$message.= "-" . $trim_value . "\n";
 								};
 								
 							}
+						$websites = implode(",", $websites);
+						$message.= $websites;
 						
+						$menus_selected = [];
 						if (isset($_POST['menu_1_answers']) && $_POST['menu_1_answers'] != "")
 							{
 							$message.= "\nMenu Selected:\n";
 							foreach($_POST['menu_1_answers'] as $value)
 								{
+								$trim_value = trim(stripslashes($value));
+								array_push($menus_selected, $trim_value);
 								$message.= "-" . trim(stripslashes($value)) . "\n";
 								};
 								$message .= "\nOther menu: " . $_POST['menu_other'] . "\n";
 								
 							}
+						$menus_selected = implode(",", $menus_selected);
+						$message.= $menus_selected;
+						$documents = NULL;
 						
+						// insert into database 
+						$insert = $mysqli->prepare("INSERT INTO formmm(project_name, personal_info, websites, menus, documents) VALUES(?,?,?,?,?)");
+						$insert->bind_param("sssss", $project_name, $personal_info, $websites, $menus_selected, $documents);
+						$insert->execute();
+
 						if (isset($_FILES['files']) && $_FILES['files'] != "")
 							{
 							$message.= "\nPictures Upload:\n";
@@ -111,7 +149,7 @@
 							}
 						
 
-						echo $message;
+						// echo $message;
 												
 						//Receive Variable
 						$sentOk = mail($to,$subject,$message,$headers);
