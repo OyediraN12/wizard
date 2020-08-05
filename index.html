@@ -43,7 +43,14 @@
 	<!-- Modernizr -->
 
 <style>
-	
+	input[type="tel"] {
+  -moz-appearance: textfield;
+}
+input[type="tel"]::-webkit-inner-spin-button, 
+input[type="tel"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 </style>
 </head>
 
@@ -182,7 +189,7 @@
 													  	placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="number"  name="phone" class="required form-control"
+													<input type="tel"  name="phone" class="required form-control"
 														placeholder="Telefon">
 												</div>
 
@@ -208,12 +215,12 @@
 
 												<div class="form-group" style="display: none;" domain-name>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Domain Name">
+														placeholder="Domain Name" onchange="checkURL(this)">
 												</div>
 
 												<div class="form-group" style="display: none;" domain-new>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Please Specify Your Domain">
+														placeholder="Please Specify Your Domain" onchange="checkURL(this)">
 												</div>
 
 
@@ -276,7 +283,7 @@
 														placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="number"  name="phone" class="required form-control"
+													<input type="tel" pattern="[0-9]*"  name="phone" class="required form-control"
 														placeholder="Telefon">
 												</div>
 
@@ -302,12 +309,12 @@
 
 												<div class="form-group" style="display: none;" domain-name>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Domain Name">
+														placeholder="Domain Name" onchange="checkURL(this)">
 												</div>
 
 												<div class="form-group" style="display: none;" domain-new>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Please Specify Your Domain">
+														placeholder="Please Specify Your Domain" onchange="checkURL(this)">
 												</div>
 
 
@@ -730,7 +737,7 @@
 												<label id="check6">Sunny</label>
 											</div>
 
-											<button type="button" class="btn btn-default btn-sm" new-line> 
+											<button type="button" class="btn btn-default btn-sm" new-line > 
 												<img src="./img/plus.png" alt="" > New Menu
 											</button>
 
@@ -1089,6 +1096,12 @@
 	<script src="./js/do_domain_option.js"></script>
 	<script src="./js/gallery_selector.js"></script>
 	<script src="./js/menu_selected.js"></script>
+	<script>
+		
+         function checkURL(o) {
+        o.value = o.value.replace(/^(https?:\/\/)?/i, "http://"); 
+       }
+	</script>
 
 	<script>
 		$(document).ready(function () {
@@ -1114,8 +1127,8 @@
 			$('[new-menu]').append(`
 			<div class="form-group input-group mb-3" id="row_${count}" other-menu>
 				<input type="text" class="form-control" placeholder="Input Menu" name="menu_1_answers[]"
-				id="menu_new${count}" selected-text-box>
-				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer">
+				id="menu_new${count}" selected-text-box style="border:0;">
+				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer; background-color:white; border:0;" >
 						X
 				</span>
 			</div>
