@@ -342,9 +342,9 @@
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt="Snow"
 													data-new="https://sitebauer.de/templates/1/preview.jpg"
 													onclick="def(myImg1)" />
-												<input id="answer_a1" name="website_1_answers[]" type="checkbox"
+													<label for="answer_a1" class="like p-1" >12.00 $</label>
+													<input id="answer_a1" name="website_1_answers[]" type="checkbox"
 													value="Divi robotics lab" class="required check">
-												<label for="answer_a1" class="like p-1" >12.00 $</label>
 											</div>
 										</div>
 										<div class="col-lg-3 col-sm-6 col-12 p-3">
@@ -1115,7 +1115,7 @@
 			<div class="form-group input-group mb-3" id="row_${count}" other-menu>
 				<input type="text" class="form-control" placeholder="Input Menu" name="menu_1_answers[]"
 				id="menu_new${count}" selected-text-box>
-				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})">
+				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer">
 						X
 				</span>
 			</div>
