@@ -42,17 +42,16 @@
 	<script src="js/modernizr.js"></script>
 	<!-- Modernizr -->
 
-	<style>
-		input[type="tel"] {
-			-moz-appearance: textfield;
-		}
-
-		input[type="tel"]::-webkit-inner-spin-button,
-		input[type="tel"]::-webkit-outer-spin-button {
-			-webkit-appearance: none;
-			margin: 0;
-		}
-	</style>
+<style>
+	input[type="tel"] {
+  -moz-appearance: textfield;
+}
+input[type="tel"]::-webkit-inner-spin-button, 
+input[type="tel"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+</style>
 </head>
 
 <body>
@@ -159,7 +158,7 @@
 									</div>
 									<div class="row justify-content-center">
 										<div class="col-lg-7">
-											<div class="box_general">
+											<div class="box_general" >
 												<div class="row">
 													<div class="col-sm-3">
 														<div class="form-group add_bottom_30">
@@ -173,11 +172,11 @@
 													</div>
 													<div class="col-md-4">
 														<input type="text" class="required form-control"
-															name="firstname" placeholder="Name" autocomplete="name">
+														 name="firstname"	placeholder="Name">
 													</div>
 													<div class="col-md-5">
-														<input type="text" class="required form-control" name="lastname"
-															placeholder="Nachname" autocomplete="name">
+														<input type="text" class="required form-control"
+														name="lastname"	placeholder="Nachname" >
 													</div>
 												</div>
 
@@ -187,25 +186,27 @@
 												</div>
 												<div class="form-group">
 													<input type="email" name="email" class="required form-control"
-														placeholder="Email" autocomplete="email">
+													  	placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="tel" name="phone" class="required form-control"
-														placeholder="Telefon" autocomplete="tel">
+													<input type="tel"  name="phone" class="required form-control"
+														placeholder="Telefon">
 												</div>
 
 												<div class="form-group">
 													<label for="">Do You have a Domain?</label> <br>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="domain_no"
-															id="exampleRadios1" value="No" do-domain>
+														<input class="form-check-input" type="radio"
+															name="domain_no" id="exampleRadios1" value="No"
+															do-domain>
 														<label class="form-check-label" for="exampleRadios1">
 															No
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="domain_yes"
-															id="exampleRadios2" value="Yes" do-domain>
+														<input class="form-check-input" type="radio"
+															name="domain_yes" id="exampleRadios2" value="Yes"
+															do-domain>
 														<label class="form-check-label" for="exampleRadios2">
 															Yes
 														</label>
@@ -219,8 +220,7 @@
 
 												<div class="form-group" style="display: none;" domain-new>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Please Specify Your Domain"
-														onchange="checkURL(this)">
+														placeholder="Please Specify Your Domain" onchange="checkURL(this)">
 												</div>
 
 
@@ -232,7 +232,7 @@
 															data-target="#terms-txt">terms and conditions</a>.</label>
 												</div>
 											</div>
-
+											
 											<!-- /box_general -->
 										</div>
 									</div>
@@ -266,11 +266,11 @@
 													</div>
 													<div class="col-md-4 ">
 														<input type="text" class="required form-control"
-															name="firstname" placeholder="Name" autocomplete="name">>
+														 name="firstname"	placeholder="Name">
 													</div>
 													<div class="col-md-5">
-														<input type="text" class="required form-control" name="lastname"
-															placeholder="Nachname" autocomplete="name">>
+														<input type="text" class="required form-control"
+														name="lastname"	placeholder="Nachname">
 													</div>
 												</div>
 
@@ -279,26 +279,28 @@
 														placeholder="company Name">
 												</div>
 												<div class="form-group">
-													<input type="email" id="email" name="email" class="required form-control"
-														placeholder="Email" autocomplete="email">
+													<input type="email" name="email" class="required form-control"
+														placeholder="Email">
 												</div>
 												<div class="form-group">
-													<input type="tel" pattern="[0-9]*" name="phone"
-														class="required form-control" placeholder="Telefon" autocomplete="tel">
+													<input type="tel" pattern="[0-9]*"  name="phone" class="required form-control"
+														placeholder="Telefon">
 												</div>
 
 												<div class="form-group">
 													<label for="">Do You have a Domain?</label> <br>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="have_domain"
-															id="exampleRadios1" value="No" do-domain>
+														<input class="form-check-input" type="radio"
+															name="have_domain" id="exampleRadios1" value="No"
+															do-domain>
 														<label class="form-check-label" for="exampleRadios1">
 															No
 														</label>
 													</div>
 													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="have_domain"
-															id="exampleRadios2" value="Yes" do-domain>
+														<input class="form-check-input" type="radio"
+															name="have_domain" id="exampleRadios2" value="Yes"
+															do-domain>
 														<label class="form-check-label" for="exampleRadios2">
 															Yes
 														</label>
@@ -312,8 +314,7 @@
 
 												<div class="form-group" style="display: none;" domain-new>
 													<input type="url" name="domain_name" class="form-control"
-														placeholder="Please Specify Your Domain"
-														onchange="checkURL(this)">
+														placeholder="Please Specify Your Domain" onchange="checkURL(this)">
 												</div>
 
 
@@ -335,27 +336,25 @@
 
 							<!-- Budget ============================== -->
 							<div class="branch" id="a2budget">
-								<div class="step" data-state="budget">
+								<div class="step" data-state="end">
 									<div class="question_title">
 										<h3>Bitte wählen Sie designs aus, welche Ihnen gefallen </h3>
 										<h2>Menüführung auswählen </h2>
 
 									</div>
-									<div class="box_general d-flex row" style="overflow-y: scroll;max-height: 400px;">
-										<div class="col-lg-3 col-sm-6  col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
-											<div class="item ">
+									<div class="box_general d-flex row" style="overflow-y: scroll;max-height: 400px;" >
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+											<div class="item "  >
 												<img id="myImg1" src="img/gallery/preview56.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt="Snow"
 													data-new="https://sitebauer.de/templates/1/preview.jpg"
 													onclick="def(myImg1)" />
-												<input id="answer_a1" name="website_1_answers[]" type="checkbox"
+													<input id="answer_a1" name="website_1_answers[]" type="checkbox"
 													value="Divi robotics lab" class="required check">
-												<label for="answer_a1" class="like p-1">12.00 $</label>
+													<label for="answer_a1" class="like p-1" >12.00 $</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg2" src="img/gallery/preview57.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -367,8 +366,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg3" src="img/gallery/preview58.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -376,13 +374,12 @@
 													onclick="def(myImg3)" />
 												<input id="answer_a3" name="website_1_answers[]" type="checkbox"
 													value="Dry-cleaning" class="required check">
-												<label for="answer_a3" class="like p-1">12.00 $
+												<label for="answer_a3" class="like p-1" >12.00 $
 
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg4" src="img/gallery/preview59.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -396,8 +393,7 @@
 											</div>
 										</div>
 
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg5" src="img/gallery/n1.png"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -410,8 +406,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg6" src="img/gallery/n2.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -423,8 +418,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg7" src="img/gallery/n3.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -432,12 +426,11 @@
 													onclick="def(myImg7)" />
 												<input id="answer_a7" name="website_1_answers[]" type="checkbox"
 													value="Web-Development" class="required check">
-												<label for="answer_a7" class="like p-1">12.00 $
+												<label for="answer_a7" class="like p-1" >12.00 $
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg8" src="img/gallery/n4.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -449,8 +442,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg9" src="img/gallery/n5.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -462,8 +454,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg10" src="img/gallery/n6.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -475,8 +466,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3"style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg11" src="img/gallery/n7.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -488,8 +478,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg12" src="img/gallery/n8.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -501,8 +490,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg13" src="img/gallery/n9.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -514,8 +502,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg14" src="img/gallery/n10.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -527,8 +514,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg15" src="img/gallery/n11.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -540,8 +526,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg16" src="img/gallery/n12.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -553,8 +538,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg17" src="img/gallery/n13.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -566,8 +550,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg18" src="img/gallery/n14.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -579,8 +562,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg19" src="img/gallery/n15.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -592,8 +574,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg20" src="img/gallery/n16.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -605,8 +586,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg21" src="img/gallery/n17.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -618,8 +598,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg22" src="img/gallery/n18.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -632,8 +611,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg23" src="img/gallery/n19.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -646,8 +624,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg24" src="img/gallery/n20.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -659,8 +636,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg25" src="img/gallery/n21.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=" "
@@ -668,12 +644,11 @@
 													onclick="def(myImg25)" />
 												<input id="answer_a25" name="website_1_answers[]" type="checkbox"
 													value="Web-Development" class="required check">
-												<label for="answer_a25" class="like p-1">12.00 $
+												<label for="answer_a25" class="like p-1" >12.00 $
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg26" src="img/gallery/n22.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -685,8 +660,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg27" src="img/gallery/n24.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -698,8 +672,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-lg-3 col-sm-6 col-12 p-4"
-											style="background:url(./img/gallery/gray.jpg);     background-repeat:space; background-position: right 5px bottom 6px ;">
+										<div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
 											<div class="item">
 												<img id="myImg28" src="img/gallery/n23.jpg"
 													class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
@@ -717,8 +690,9 @@
 							</div>
 							<!-- /Budget ============================== -->
 
-							<!-- Budget ============================== -->
-							<div class="step" id="budget" data-state="end">
+						
+							<!-- Last step ============================== -->
+							<div class="submit step" id="end">
 								<div class="question_title">
 									<h3>Please fill with your details</h3>
 									<p>Ei duo homero postea dignissim.</p>
@@ -733,301 +707,46 @@
 											</div>
 
 											<div class="checkbox_questions">
-												<input id="check1" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="Start" onclick="menuSelected(check1)">
+												<input id="check1" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Start" onclick="menuSelected(check1)">
 												<label id="check1">Start</label>
 											</div>
 											<div class="checkbox_questions">
-												<input id="check2" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="About Us" onclick="menuSelected(check2)">
+												<input id="check2" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="About Us" onclick="menuSelected(check2)">
 												<label id="check2">About Us</label>
 											</div>
 											<div class="checkbox_questions">
-												<input id="check3" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="Services" onclick="menuSelected(check3)">
+												<input id="check3" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Services" onclick="menuSelected(check3)">
 												<label id="check3">Services</label>
 											</div>
 											<div class="checkbox_questions">
-												<input id="check4" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="Gallery References"
-													onclick="menuSelected(check4)">
+												<input id="check4" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Gallery References" onclick="menuSelected(check4)">
 												<label id="check4">Gallery References</label>
 											</div>
 
 											<div class="checkbox_questions">
-												<input id="check5" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="Contact" onclick="menuSelected(check5)">
+												<input id="check5" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Contact" onclick="menuSelected(check5)">
 												<label id="check5">Contact</label>
 											</div>
 											<div class="checkbox_questions">
-												<input id="check6" name="menu_1_answers[]" type="checkbox"
-													class="siteMenu" value="Sunny" onclick="menuSelected(check6)">
+												<input id="check6" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+													value="Sunny" onclick="menuSelected(check6)">
 												<label id="check6">Sunny</label>
 											</div>
 
-											<button type="button" class="btn btn-default btn-sm" new-line>
-												<img src="./img/plus.png" alt=""> New Menu
+											<button type="button" class="btn btn-default btn-sm" new-line > 
+												<img src="./img/plus.png" alt="" > New Menu
 											</button>
 
-											<div class="mt-4" new-menu>
-
+											 <div class="mt-4" new-menu >
+												
 											</div>
-
-
-										</div>
-										<!-- /box_general -->
-									</div>
-								</div>
-								<!-- /row -->
-							</div>
-							<!-- /Budget ============================== -->
-
-							<!-- Last step ============================== -->
-							<div class="submit step" id="end">
-								<div class="question_title">
-									<h3>Upload Pictures</h3>
-									<p>Ei duo homero postea dignissim.</p>
-									<p id="selected_message"></p>
-								</div>
-								<div class="row justify-content-center">
-									<div class="col-lg-9">
-										<div class="box_general">
-											<!-- here goes the collapse  -->
-											<div class="accordion" id="accordionExample">
-												<div class="card" style="display: none;" Start>
-													<div class="card-header" id="headingOne">
-														<h2 class="mb-0">
-															<button class="btn btn-link" type="button"
-																data-toggle="collapse" data-target="#collapseOne"
-																aria-expanded="true" aria-controls="collapseOne">
-																Start
-															</button>
-														</h2>
-													</div>
-
-													<div id="collapseOne" class="collapse show"
-														aria-labelledby="headingOne" data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload1" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload1, dvPreview1)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview1">
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card" style="display: none;" About-Us>
-													<div class="card-header" id="headingTwo">
-														<h2 class="mb-0">
-															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseTwo"
-																aria-expanded="false" aria-controls="collapseTwo">
-																Uber uns
-															</button>
-														</h2>
-													</div>
-													<div id="collapseTwo" class="collapse show"
-														aria-labelledby="headingOne" data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload2" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload2, dvPreview2)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview2">
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card" style="display: none;" Services>
-													<div class="card-header" id="headingThree">
-														<h2 class="mb-0">
-															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseThree"
-																aria-expanded="false" aria-controls="collapseThree">
-																Leistungen
-															</button>
-														</h2>
-													</div>
-													<div id="collapseThree" class="collapse"
-														aria-labelledby="headingOne" data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload3" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload3, dvPreview3)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview3">
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card" style="display: none;" Gallery_References>
-													<div class="card-header" id="headingFour">
-														<h2 class="mb-0">
-															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseFour"
-																aria-expanded="false" aria-controls="collapseFour">
-																Referezen
-															</button>
-														</h2>
-													</div>
-													<div id="collapseFour" class="collapse" aria-labelledby="headingOne"
-														data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload4" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload4, dvPreview4)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview4">
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card" style="display: none;" Contact>
-													<div class="card-header" id="headingFive">
-														<h2 class="mb-0">
-															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseFive"
-																aria-expanded="false" aria-controls="collapseFive">
-																kontakt
-															</button>
-														</h2>
-													</div>
-													<div id="collapseFive" class="collapse" aria-labelledby="headingOne"
-														data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload5" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload5, dvPreview5)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview5">
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card" style="display: none;" Sunny>
-													<div class="card-header" id="headingSix">
-														<h2 class="mb-0">
-															<button class="btn btn-link collapsed" type="button"
-																data-toggle="collapse" data-target="#collapseSix"
-																aria-expanded="false" aria-controls="collapseSix">
-																Sunny
-															</button>
-														</h2>
-													</div>
-													<div id="collapseSix" class="collapse" aria-labelledby="headingOne"
-														data-parent="#accordionExample">
-														<div class="card-body">
-															<textarea class="form-control" rows="8" cols="40"
-																id="comment" placeholder="Enter text here"></textarea>
-															<div class="input-group mb-3">
-																<div class="input-group-prepend">
-																	<span class="input-group-text">Upload Pictures
-																		here</span>
-																</div>
-																<div class="custom-file">
-																	<input id="fileupload6" type="file"
-																		multiple="multiple" name="files[]"
-																		class="custom-file-input"
-																		onclick="antman(fileupload6, dvPreview6)">
-																	<label class="custom-file-label"
-																		for="inputGroupFile01"></label>
-																</div>
-															</div>
-															<hr />
-															<b>Live Preview</b>
-															<br />
-															<br />
-															<div id="dvPreview6">
-															</div>
-														</div>
-													</div>
-												</div>
-												<!---end of card div -->
-												<div new-card>
-
-												</div>
-											</div>
+											
+											
 										</div>
 										<!-- /box_general -->
 									</div>
@@ -1131,17 +850,18 @@
 	<script src="./js/gallery_selector.js"></script>
 	<script src="./js/menu_selected.js"></script>
 	<script>
-		function checkURL(o) {
-			o.value = o.value.replace(/^(https?:\/\/)?/i, "http://");
-		}
+		
+         function checkURL(o) {
+        o.value = o.value.replace(/^(https?:\/\/)?/i, "http://"); 
+       }
 	</script>
 
 	<script>
 		$(document).ready(function () {
 			$('.js-example-basic-multiple').select2();
 
-
-
+			
+			
 		});
 
 		$('[data-fancybox="gallery"]').fancybox({
@@ -1154,15 +874,15 @@
 		Add and remove of menu
 		**/
 		var count = 0;
-
-		$("[new-line]").click(function () {
+  
+		$("[new-line]").click(function() {
 			count = count + 1;
 			$('[new-menu]').append(`
 			<div class="form-group input-group mb-3" id="row_${count}" other-menu>
 				<input type="text" class="form-control" placeholder="Input Menu" name="menu_1_answers[]"
-				id="menu_new${count}" selected-text-box style="border:0; border-bottom: 1px solid grey;">
-				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer; background-color:white; border:0; border-bottom: 1px solid grey; " >
-						<b style:"grey">X</b>
+				id="menu_new${count}" selected-text-box style="border:0; border-bottom: 2px solid black;">
+				<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer; background-color:white; border:0; border-bottom: 2px solid black; " >
+						<b>X</b>
 				</span>
 			</div>
 			`)
@@ -1211,21 +931,24 @@
 			/**
 			 * Replace menu button value
 			 **/
-			$("[selected-text-box]:input").keyup(function (e) {
+			$("[selected-text-box]:input").keyup(function(e) {
 				var input_id = $(this).attr('id');
 				var input_value = $(this).val();
-				$('[new-card]').find('[' + input_id + ']').find('button').html(input_value);
+				$('[new-card]').find( '[' + input_id + ']' ).find('button').html(input_value);
 			})
-
+		
 		});
 
 		function removeLine(elemId) {
-			var input_id = $(elemId).parents("[other-menu]").find("[selected-text-box]:input").attr('id');
+			var input_id = $(elemId).parents("[other-menu]").find( "[selected-text-box]:input" ).attr('id');
 			$(elemId).parents('[other-menu]').remove();
-			$('[new-card]').find('[' + input_id + ']').remove();
+			$('[new-card]').find( '[' + input_id + ']' ).remove();
 		}
-	</script>
 
+
+
+	</script>
+	
 </body>
 
 </html>
