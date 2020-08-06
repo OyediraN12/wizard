@@ -26,6 +26,12 @@ Author URI: http://themeforest.net/user/Ansonika/
 /*  for the form */
 
 /* for label input */
+.gray{
+  background:url(./img/gallery/gray.jpg); 
+   background-size: 245px 340px ;   
+   background-repeat:space; 
+   background-position: center;
+}
 .like{
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 2.0rem;
