@@ -608,7 +608,7 @@ footer ul li a:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
   display: block;
-  background-color:#418AF3;
+  background-color: #418AF3;
   padding: 45px;
   text-align: center;
   margin-bottom: 0;
@@ -635,7 +635,7 @@ footer ul li a:hover {
 .item input[type="checkbox"]:not(old):checked + span + label {
   display: block;
   border: 1px solid #d3d3d3;
-  background-color: #225522;
+  background-color: #00008b;
   -webkit-box-shadow: 0 2px 40px #e0e5f0;
   -moz-box-shadow: 0 2px 40px #e0e5f0;
   box-shadow: 0 2px 40px #e0e5f0;
