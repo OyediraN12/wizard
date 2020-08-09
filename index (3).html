@@ -71,7 +71,7 @@
                      <div class="row justify-content-center">
                         <div class="col-lg-4">
                            <div class="item">
-                              <input id="answer_1" type="radio" name="branch_1_group_1" value="Right_Packet"
+                              <input id="answer_1" type="radio" name="branch_1_group_1" value="Left_Packet"
                                  class="required">
                               <label for="answer_1"><img src="img/seo.png" alt=""
                                     style="width: 120px;"><strong>OnePager</strong>Perfekt für den
@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-lg-4">
                            <div class="item">
-                              <input id="answer_2" name="branch_1_group_1" type="radio" value="Left_Packet"
+                              <input id="answer_2" name="branch_1_group_1" type="radio" value="Right_Packet"
                                  class="required">
                               <label for="answer_2"><img src="img/web.png" alt=""
                                     style="width: 120px;"><strong>MultiPager</strong>Ideal für den Klein-, &
@@ -130,152 +130,77 @@
                         <!-- /row-->
                      </div>
                      <!-- /Design > What Type of Design do you need ============================== -->
-                     <!-- Budget ============================== -->
-                     <!-- /Budget ============================== -->
-                     <!-- Left_Packet ============================== -->
-                     <div class="branch" id="Left_Packet">
-                        <div class="step" data-state="a2budget">
-                           <div class="question_title">
-                              <h3>Bitte geben Sie Ihre Details an</h3>
-                              <p>Ihre daten werden lediglich intern verwendet und nicht
-                                 an dritte weiter gegeben</p>
-                           </div>
-                           <div class="row justify-content-center">
-                              <div class="col-lg-7">
-                                 <div class="box_general">
-                                    <div class="row">
-                                       <div class="col-sm-3">
-                                          <div class="form-group add_bottom_30">
-                                             <div class="styled-select">
-                                                <select name="mr_mrs" class="required">
-                                                   <option value="Herr">Herr</option>
-                                                   <option value="Frau">Frau</option>
-                                                </select>
+                        <!-- Budget ============================== -->
+                        <!-- /Budget ============================== -->
+                        <!-- Left_Packet ============================== -->
+                        <div class="branch" id="Left_Packet">
+                           <div class="step" data-state="a2budget">
+                              <div class="question_title">
+                                 <h3>Bitte geben Sie Ihre Details an</h3>
+                                 <p>Ihre daten werden lediglich intern verwendet und nicht
+                                    an dritte weiter gegeben</p>
+                              </div>
+                              <div class="row justify-content-center">
+                                 <div class="col-lg-7">
+                                    <div class="box_general">
+                                       <div class="row">
+                                          <div class="col-sm-3 ">
+                                             <div class="form-group add_bottom_30">
+                                                <div class="styled-select">
+                                                   <select name="mr_mrs" class="required">
+                                                      <option value="Herr">Herr</option>
+                                                      <option value="Frau">Frau</option>
+                                                   </select>
+                                                </div>
                                              </div>
                                           </div>
-                                       </div>
-                                       <div class="col-md-4">
-                                          <input type="text" class="required form-control" id="fname" name="fname"
-                                             placeholder="Vorname" autocomplete="on">
-                                       </div>
-                                       <div class="col-md-5">
-                                          <input type="text" class="required form-control" id="lname" name="lname"
-                                             placeholder="Nachname" autocomplete="on">
+                                          <div class="col-md-4 ">
+                                             <input type="text" class="required form-control" name="firstname"
+                                                placeholder="Vorname" autocomplete="on">
+                                          </div>
+                                          <div class="col-md-5">
+                                             <input type="text" class="required form-control" name="lastname"
+                                                placeholder="Nachname" autocomplete="on">
+                                          </div>
                                        </div>
                                        <div class="form-group">
-                                          <input type="tel"  name="phone" class="required form-control"
+                                          <input type="text" name="company_name" class="required form-control"
+                                             placeholder="firmen name">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="email" name="email" class="required form-control"
+                                             placeholder="E-mail" autocomplete="email">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="tel" pattern="[0-9]*" name="phone" class="required form-control"
                                              placeholder="Telefon" autocomplete="tel">
                                        </div>
                                        <div class="form-group">
                                           <label for="">Soll wir eine domain für Sie regiestrieren?</label> <br>
                                           <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio"
-                                                name="have_domain" id="exampleRadios1" value="No"
-                                                do-domain>
+                                             <input class="form-check-input" type="radio" name="have_domain"
+                                                id="exampleRadios1" value="No" do-domain>
                                              <label class="form-check-label" for="exampleRadios1">
-                                             No
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio"
-                                                name="have_domain" id="exampleRadios2" value="Yes"
-                                                do-domain>
-                                             <label class="form-check-label" for="exampleRadios2">
-                                             Yes
-                                             </label>
-                                          </div>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="domain_yes"
-                                             id="exampleRadios2" value="Yes" do-domain>
-                                          <label class="form-check-label" for="exampleRadios2">
-                                             Yes
-                                          </label>
-                                       </div>
-                                    </div>
-                                    <div class="form-group" style="display: none;" domain-name>
-                                       <input type="url" name="domain_name" class="form-control"
-                                          placeholder="business.de" onchange="checkURL(this)">
-                                    </div>
-                                    <div class="form-group" style="display: none;" domain-new>
-                                       <input type="url" name="domain_name" class="form-control"
-                                          placeholder="business.de" onchange="checkURL(this)">
-                                    </div>
-                                    <div class="checkbox_questions">
-                                       <input name="terms" type="checkbox" class="icheck required" value="yes">
-                                       <label>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren <a href="#"
-                                             data-toggle="modal" data-target="#terms-txt">Datenschutzbestimmungen</a>
-                                          zu.</label>
-                                    </div>
-                                 </div>
-                                 <!-- /box_general -->
-                              </div>
-                           </div>
-                           <!-- /row -->
-                        </div>
-                     </div>
-                     <!-- /Left_Packet ============================== -->
-                     <!-- Right_Packet ============================== -->
-                     <div class="branch" id="Right_Packet">
-                        <div class="step" data-state="a2budget">
-                           <div class="question_title">
-                              <h3>Bitte geben Sie Ihre Details an</h3>
-                              <p>Ihre daten werden lediglich intern verwendet und nicht
-                                 an dritte weiter gegeben</p>
-                           </div>
-                           <div class="row justify-content-center">
-                              <div class="col-lg-7">
-                                 <div class="box_general">
-                                    <div class="row">
-                                       <div class="col-sm-3 ">
-                                          <div class="form-group add_bottom_30">
-                                             <div class="styled-select">
-                                                <select name="mr_mrs" class="required">
-                                                   <option value="Herr">Herr</option>
-                                                   <option value="Frau">Frau</option>
-                                                </select>
+                                                No
+                                                </label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio"
+                                                   name="have_domain" id="exampleRadios2" value="Yes"
+                                                   do-domain>
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                Yes
+                                                </label>
                                              </div>
                                           </div>
-                                       </div>
-                                       <div class="col-md-4 ">
-                                          <input type="text" class="required form-control" name="firstname"
-                                             placeholder="Vorname" autocomplete="on">
-                                       </div>
-                                       <div class="col-md-5">
-                                          <input type="text" class="required form-control" name="lastname"
-                                             placeholder="Nachname" autocomplete="on">
-                                       </div>
-                                    </div>
-                                    <div class="form-group">
-                                       <input type="text" name="company_name" class="required form-control"
-                                          placeholder="firmen name">
-                                    </div>
-                                    <div class="form-group">
-                                       <input type="email" name="email" class="required form-control"
-                                          placeholder="E-mail" autocomplete="email">
-                                    </div>
-                                    <div class="form-group">
-                                       <input type="tel" pattern="[0-9]*" name="phone" class="required form-control"
-                                          placeholder="Telefon" autocomplete="tel">
-                                    </div>
-                                    <div class="form-group">
-                                       <label for="">Soll wir eine domain für Sie regiestrieren?</label> <br>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="have_domain"
-                                             id="exampleRadios1" value="No" do-domain>
-                                          <label class="form-check-label" for="exampleRadios1">
-                                             No
-                                             </label>
+                                          <div class="form-group" style="display: none;" domain-name>
+                                             <input type="url" name="domain_name" class="form-control"
+                                                placeholder="business.de" onchange="checkURL(this)">
                                           </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio"
-                                                name="have_domain" id="exampleRadios2" value="Yes"
-                                                do-domain>
-                                             <label class="form-check-label" for="exampleRadios2">
-                                             Yes
-                                             </label>
+                                          <div class="form-group" style="display: none;" domain-new>
+                                             <input type="url" name="domain_name" class="form-control"
+                                                placeholder="business.de" onchange="checkURL(this)">
                                           </div>
-                                       </div>
                                        <div class="form-group" style="display: none;" domain-name>
                                           <input type="url" name="domain_name" class="form-control"
                                              placeholder="business.de" onchange="checkURL(this)">
@@ -284,36 +209,110 @@
                                           <input type="url" name="domain_name" class="form-control"
                                              placeholder="business.de" onchange="checkURL(this)">
                                        </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="have_domain2"
-                                             id="exampleRadios2" value="Yes" do-domain>
-                                          <label class="form-check-label" for="exampleRadios2">
-                                             Yes
-                                          </label>
+                                       <div class="checkbox_questions">
+                                          <input name="terms" type="checkbox" class="icheck required"
+                                             value="yes">
+                                          <label>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren<a href="#" data-toggle="modal"
+                                                data-target="#terms-txt">Datenschutzbestimmungen</a> zu.</label>
                                        </div>
                                     </div>
-                                    <div class="form-group" style="display: none;" domain-name>
-                                       <input type="url" name="domain_name" class="form-control"
-                                          placeholder="business.de" onchange="checkURL(this)">
-                                    </div>
-                                    <div class="form-group" style="display: none;" domain-new>
-                                       <input type="url" name="domain_name" class="form-control"
-                                          placeholder="business.de" onchange="checkURL(this)">
-                                    </div>
-                                    <div class="checkbox_questions">
-                                       <input name="terms" type="checkbox" class="icheck required" value="yes">
-                                       <label>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren <a href="#"
-                                             data-toggle="modal" data-target="#terms-txt">Datenschutzbestimmungen</a>
-                                          zu.
-                                       </label>
-                                    </div>
+                                    <!-- /box_general -->
                                  </div>
-                                 <!-- /box_general -->
                               </div>
+                              <!-- /row -->
                            </div>
-                           <!-- /row -->
                         </div>
-                     </div>
+                        <!-- /Left_Packet ============================== -->
+                        <!-- Right_Packet ============================== -->
+                        <div class="branch" id="Right_Packet">
+                           <div class="step" data-state="a2budget">
+                              <div class="question_title">
+                                 <h3>Bitte geben Sie Ihre Details an</h3>
+                                 <p>Ihre daten werden lediglich intern verwendet und nicht
+                                    an dritte weiter gegeben</p>
+                              </div>
+                              <div class="row justify-content-center">
+                                 <div class="col-lg-7">
+                                    <div class="box_general">
+                                       <div class="row">
+                                          <div class="col-sm-3 ">
+                                             <div class="form-group add_bottom_30">
+                                                <div class="styled-select">
+                                                   <select name="mr_mrs" class="required">
+                                                      <option value="Herr">Herr</option>
+                                                      <option value="Frau">Frau</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-4 ">
+                                             <input type="text" class="required form-control" name="firstname"
+                                                placeholder="Vorname" autocomplete="on">
+                                          </div>
+                                          <div class="col-md-5">
+                                             <input type="text" class="required form-control" name="lastname"
+                                                placeholder="Nachname" autocomplete="on">
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="text" name="company_name" class="required form-control"
+                                             placeholder="firmen name">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="email" name="email" class="required form-control"
+                                             placeholder="E-mail" autocomplete="email">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="tel" pattern="[0-9]*" name="phone" class="required form-control"
+                                             placeholder="Telefon" autocomplete="tel">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="">Soll wir eine domain für Sie regiestrieren?</label> <br>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="have_domain"
+                                                id="exampleRadios1" value="No" do-domain>
+                                             <label class="form-check-label" for="exampleRadios1">
+                                                No
+                                                </label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio"
+                                                   name="have_domain" id="exampleRadios2" value="Yes"
+                                                   do-domain>
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                Yes
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <div class="form-group" style="display: none;" domain-name>
+                                             <input type="url" name="domain_name" class="form-control"
+                                                placeholder="business.de" onchange="checkURL(this)">
+                                          </div>
+                                          <div class="form-group" style="display: none;" domain-new>
+                                             <input type="url" name="domain_name" class="form-control"
+                                                placeholder="business.de" onchange="checkURL(this)">
+                                          </div>
+                                       <div class="form-group" style="display: none;" domain-name>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="form-group" style="display: none;" domain-new>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="checkbox_questions">
+                                          <input name="terms" type="checkbox" class="icheck required"
+                                             value="yes">
+                                          <label class=>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren<a href="#" data-toggle="modal"
+                                                data-target="#terms-txt">Datenschutzbestimmungen</a> zu.</label>
+                                       </div>
+                                    </div>
+                                    <!-- /box_general -->
+                                 </div>
+                              </div>
+                              <!-- /row -->
+                           </div>
+                        </div>
                      <!-- /Right_Packet ============================== -->
                      <!-- Budget ============================== -->
                      <div class="branch" id="a2budget">
@@ -795,7 +794,6 @@
                </p>
             </div>
          </div>
-      </div>
       </div>
    </div>
 
