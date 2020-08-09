@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="STEPS | Multipurpose Working Wizard with Branches">
+      <meta name="author" content="Ansonika">
+      <title>STEPS | Multipurpose Working Wizard with Branches</title>
+      <!-- Favicons-->
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+         href="img/apple-touch-icon-114x114-precomposed.png">
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+         href="img/apple-touch-icon-144x144-precomposed.png">
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- GOOGLE WEB FONT -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+      <!-- BASE CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/menu.css" rel="stylesheet">
+      <link href="css/vendors.min.css" rel="stylesheet">
+      <link href="css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+      <link href="css/skins/square/grey.css" rel="stylesheet">
+      <link href="css/select2.min.css" rel="stylesheet">
+      <link href="css/jquery.fancybox.css" rel="stylesheet">
+      <!-- YOUR CUSTOM CSS -->
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="./css/popupImage.css" rel="stylesheet">
+      <script src="js/modernizr.js"></script>
+      <!-- Modernizr -->
+      <style>
+         input[type="tel"] {
+         -moz-appearance: textfield;
+         }
+         input[type="tel"]::-webkit-inner-spin-button, 
+         input[type="tel"]::-webkit-outer-spin-button { 
+         -webkit-appearance: none; 
+         margin: 0; 
+         }
+      </style>
+   </head>
+   <body>
+      <div id="preloader">
+         <div data-loader="circle-side"></div>
+      </div>
+      <!-- /loader_form -->
+      <!-- /Header -->
+      <!-- remove this  -->
+      <main>
+         <div class="container">
+            <div id="wizard_container">
+               <form name="example-1" id="wrapped" method="POST" enctype="multipart/form-data">
+                  <input id="website" name="website" type="text" value="">
+                  <!-- Leave input above for security protection, read docs for details -->
+                  <div id="middle-wizard">
+                     <!-- First branch What Type of Project ============================== -->
+                     <div class="step" data-state="branchtype">
+                        <div class="question_title">
+                           <h3>Wählen Sie Ihr Paket aus </h3>
+                           <p>Professionelle Website erstellen lassen. Ganz bequem & einfach in nur wenigen
+                              Schritten!
+                           </p>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-lg-4">
+                              <div class="item">
+                                 <input id="answer_1" type="radio" name="branch_1_group_1" value="Right_Packet"
+                                    class="required">
+                                 <label for="answer_1"><img src="img/seo.png" alt=""
+                                    style="width: 120px;"><strong>OnePager</strong>Perfekt für den
+                                 Anfänger </label>
+                              </div>
+                           </div>
+                           <div class="col-lg-4">
+                              <div class="item">
+                                 <input id="answer_2" name="branch_1_group_1" type="radio" value="Left_Packet"
+                                    class="required">
+                                 <label for="answer_2"><img src="img/web.png" alt=""
+                                    style="width: 120px;"><strong>MultiPager</strong>Ideal für den Klein-, &
+                                 Mittelstand </label>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /row-->
+                     </div>
+                     <!-- /First branch What Type of Project ============================== -->
+                     <!-- Design > What Type of Design do you need ============================== -->
+                     <div class="branch" id="Design">
+                        <div class="step" data-state="abudget">
+                           <div class="question_title">
+                              <h3>What Type of Design do you need?</h3>
+                              <p>Multiple Selection (Checkbox based)</p>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4">
+                                 <div class="item">
+                                    <input id="branch_3_answer_1" type="checkbox" name="branch_3_answers[]"
+                                       value="Web Design">
+                                    <label for="branch_3_answer_1"><img src="img/design_icon_2.svg"
+                                       alt=""><strong>Web Design</strong>Postea democritum mnesarchum ne
+                                    nam, ad vim aperiri tractatos.</label>
+                                 </div>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="item">
+                                    <input id="branch_3_answer_2" name="branch_3_answers[]" type="checkbox"
+                                       value="Print Design">
+                                    <label for="branch_3_answer_2"><img src="img/design_icon_3.svg"
+                                       alt=""><strong>Print Design</strong>Postea democritum mnesarchum ne
+                                    nam, ad vim aperiri tractatos.</label>
+                                 </div>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="item">
+                                    <input id="branch_3_answer_3" name="branch_3_answers[]" type="checkbox"
+                                       value="Logo Design">
+                                    <label for="branch_3_answer_3"><img src="img/design_icon_4.svg"
+                                       alt=""><strong>Logo Design</strong>Postea democritum mnesarchum ne
+                                    nam, ad vim aperiri tractatos.</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- /row-->
+                        </div>
+                        <!-- /Design > What Type of Design do you need ============================== -->
+                        <!-- Budget ============================== -->
+                        <!-- /Budget ============================== -->
+                        <!-- Left_Packet ============================== -->
+                        <div class="branch" id="Left_Packet">
+                           <div class="step" data-state="a2budget">
+                              <div class="question_title">
+                                 <h3>Bitte geben Sie Ihre Details an</h3>
+                              <p>Ihre daten werden lediglich intern verwendet und nicht
+        an dritte weiter gegeben</p>
+                              </div>
+                              <div class="row justify-content-center">
+                                 <div class="col-lg-7">
+                                    <div class="box_general" >
+                                       <div class="row">
+                                          <div class="col-sm-3">
+                                             <div class="form-group add_bottom_30">
+                                                <div class="styled-select">
+                                                   <select name="mr_mrs" class="required">
+                                                      <option value="Herr">Herr</option>
+                                                      <option value="Frau">Frau</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                             <input type="text" class="required form-control"
+                                             id="fname"   name="fname"	placeholder="Vorname" autocomplete="on">
+                                          </div>
+                                          <div class="col-md-5">
+                                             <input type="text" class="required form-control"
+                                              id="lname"  name="lname"	placeholder="Nachname" autocomplete="on" >
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="text" name="company_name" class="required form-control"
+                                             placeholder="firmen name">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="email" name="email" class="required form-control"
+                                             placeholder="Email" autocomplete="email">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="tel"  name="phone" class="required form-control"
+                                             placeholder="Telefon" autocomplete="tel">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="">Soll wir eine domain für Sie regiestrieren?</label> <br>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio"
+                                                name="domain_no" id="exampleRadios1" value="No"
+                                                do-domain>
+                                             <label class="form-check-label" for="exampleRadios1">
+                                             No
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio"
+                                                name="domain_yes" id="exampleRadios2" value="Yes"
+                                                do-domain>
+                                             <label class="form-check-label" for="exampleRadios2">
+                                             Yes
+                                             </label>
+                                          </div>
+                                       </div>
+                                       <div class="form-group" style="display: none;" domain-name>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="form-group" style="display: none;" domain-new>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="checkbox_questions">
+                                          <input name="terms" type="checkbox" class="icheck required"
+                                             value="yes">
+                                          <label>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren <a href="#" data-toggle="modal" data-target="#terms-txt">Datenschutzbestimmungen</a> zu.</label>
+                                       </div>
+                                    </div>
+                                    <!-- /box_general -->
+                                 </div>
+                              </div>
+                              <!-- /row -->
+                           </div>
+                        </div>
+                        <!-- /Left_Packet ============================== -->
+                        <!-- Right_Packet ============================== -->
+                        <div class="branch" id="Right_Packet">
+                           <div class="step" data-state="a2budget">
+                              <div class="question_title">
+                                 <h3>Bitte geben Sie Ihre Details an</h3>
+                              <p>Ihre daten werden lediglich intern verwendet und nicht 
+        an dritte weiter gegeben</p>
+                              </div>
+                              <div class="row justify-content-center">
+                                 <div class="col-lg-7">
+                                    <div class="box_general">
+                                       <div class="row">
+                                          <div class="col-sm-3 ">
+                                             <div class="form-group add_bottom_30">
+                                                <div class="styled-select">
+                                                   <select name="mr_mrs" class="required">
+                                                      <option value="Herr">Herr</option>
+                                                      <option value="Frau">Frau</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-4 ">
+                                             <input type="text" class="required form-control"
+                                                name="firstname"	placeholder="Vorname" autocomplete="on">
+                                          </div>
+                                          <div class="col-md-5">
+                                             <input type="text" class="required form-control"
+                                                name="lastname"	placeholder="Nachname" autocomplete="on" >
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="text" name="company_name" class="required form-control"
+                                             placeholder="firmen name">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="email" name="email" class="required form-control"
+                                             placeholder="E-mail" autocomplete="email">
+                                       </div>
+                                       <div class="form-group">
+                                          <input type="tel" pattern="[0-9]*"  name="phone" class="required form-control"
+                                             placeholder="Telefon" autocomplete="tel">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="">Soll wir eine domain für Sie regiestrieren?</label> <br>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio"
+                                                name="have_domain" id="exampleRadios1" value="No"
+                                                do-domain>
+                                             <label class="form-check-label" for="exampleRadios1">
+                                             No
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio"
+                                                name="have_domain2" id="exampleRadios2" value="Yes"
+                                                do-domain>
+                                             <label class="form-check-label" for="exampleRadios2">
+                                             Yes
+                                             </label>
+                                          </div>
+                                       </div>
+                                       <div class="form-group" style="display: none;" domain-name>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="form-group" style="display: none;" domain-new>
+                                          <input type="url" name="domain_name" class="form-control"
+                                             placeholder="business.de" onchange="checkURL(this)">
+                                       </div>
+                                       <div class="checkbox_questions">
+                                          <input name="terms" type="checkbox" class="icheck required"
+                                             value="yes">
+                                          <label>Mit dem Absenden Ihrer Anfrage stimmen Sie unseren <a href="#" data-toggle="modal" data-target="#terms-txt">Datenschutzbestimmungen</a> zu.
+</label>
+                                       </div>
+                                    </div>
+                                    <!-- /box_general -->
+                                 </div>
+                              </div>
+                              <!-- /row -->
+                           </div>
+                        </div>
+                        <!-- /Right_Packet ============================== -->
+                        <!-- Budget ============================== -->
+                        <div class="branch" id="a2budget">
+                           <div class="step" data-state="end">
+                              <div class="question_title">
+                                 <h3>Bitte wählen Sie designs aus, welche Ihnen gefallen </h3>
+                              </div>
+                              <div class="box_general d-flex row" style="overflow-y: scroll;max-height: 400px;" >
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item "  >
+                                       <img id="myImg1" src="img/gallery/preview56.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt="Snow"
+                                          data-new="https://sitebauer.de/templates/1/preview.jpg"
+                                          onclick="def(myImg1)" />
+                                       <input id="answer_a1" name="website_1_answers[]" type="checkbox"
+                                          value="1" class="required check">
+                                       <label for="answer_a1" class="like p-1" >auswählen</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg2" src="img/gallery/preview57.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/2/preview.jpg"
+                                          onclick="def(myImg2)" />
+                                       <input id="answer_a2" name="website_1_answers[]" type="checkbox"
+                                          value="2" class="required check">
+                                       <label for="answer_a2" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg3" src="img/gallery/preview58.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/3/preview.jpg"
+                                          onclick="def(myImg3)" />
+                                       <input id="answer_a3" name="website_1_answers[]" type="checkbox"
+                                          value="3" class="required check">
+                                       <label for="answer_a3" class="like p-1" >auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg4" src="img/gallery/preview59.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/4/preview.jpg"
+                                          onclick="def(myImg4)" />
+                                       <input id="answer_a4" name="website_1_answers[]" type="checkbox"
+                                          value="4" class="required check">
+                                       <label for="answer_a4" class="like p-1"> auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg5" src="img/gallery/n1.png"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/5/preview.jpg"
+                                          onclick="def(myImg5)" />
+                                       <input id="answer_a5" name="website_1_answers[]" type="checkbox"
+                                          value="5" class="required check">
+                                       <label for="answer_a5" class="like p-1"> auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg6" src="img/gallery/n2.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/7/preview.jpg"
+                                          onclick="def(myImg6)" />
+                                       <input id="answer_a6" name="website_1_answers[]" type="checkbox"
+                                          value="6" class="required check">
+                                       <label for="answer_a6" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg7" src="img/gallery/n3.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/8/preview.jpg"
+                                          onclick="def(myImg7)" />
+                                       <input id="answer_a7" name="website_1_answers[]" type="checkbox"
+                                          value="7" class="required check">
+                                       <label for="answer_a7" class="like p-1" >auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg8" src="img/gallery/n4.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/9/preview.jpg"
+                                          onclick="def(myImg8)" />
+                                       <input id="answer_a8" name="website_1_answers[]" type="checkbox"
+                                          value="8" class="required check">
+                                       <label for="answer_a8" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg9" src="img/gallery/n5.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/10/preview.jpg"
+                                          onclick="def(myImg9)" />
+                                       <input id="answer_a9" name="website_1_answers[]" type="checkbox"
+                                          value="9" class="required check">
+                                       <label for="answer_a9" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg10" src="img/gallery/n6.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/11/preview.jpg"
+                                          onclick="def(myImg10)" />
+                                       <input id="answer_a10" name="website_1_answers[]" type="checkbox"
+                                          value="10" class="required check">
+                                       <label for="answer_a10" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3"style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg11" src="img/gallery/n7.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/13/preview.jpg"
+                                          onclick="def(myImg11)" />
+                                       <input id="answer_a11" name="website_1_answers[]" type="checkbox"
+                                          value="11" class="required check">
+                                       <label for="answer_a11" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg12" src="img/gallery/n8.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/14/preview.jpg"
+                                          onclick="def(myImg12)" />
+                                       <input id="answer_a12" name="website_1_answers[]" type="checkbox"
+                                          value="12" class="required check">
+                                       <label for="answer_a12" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg13" src="img/gallery/n9.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/15/preview.jpg"
+                                          onclick="def(myImg13)" />
+                                       <input id="answer_a13" name="website_1_answers[]" type="checkbox"
+                                          value="13" class="required check">
+                                       <label for="answer_a13" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg14" src="img/gallery/n10.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/16/preview.jpg"
+                                          onclick="def(myImg14)" />
+                                       <input id="answer_a14" name="website_1_answers[]" type="checkbox"
+                                          value="14" class="required check">
+                                       <label for="answer_a14" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg15" src="img/gallery/n11.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/17/preview.jpg"
+                                          onclick="def(myImg15)" />
+                                       <input id="answer_a15" name="website_1_answers[]" type="checkbox"
+                                          value="15" class="required check">
+                                       <label for="answer_a15" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg16" src="img/gallery/n12.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/18/preview.jpg"
+                                          onclick="def(myImg16)" />
+                                       <input id="answer_a16" name="website_1_answers[]" type="checkbox"
+                                          value="16" class="required check">
+                                       <label for="answer_a16" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg17" src="img/gallery/n13.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/19/preview.jpg"
+                                          onclick="def(myImg17)" />
+                                       <input id="answer_a17" name="website_1_answers[]" type="checkbox"
+                                          value="17" class="required check">
+                                       <label for="answer_a17" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg18" src="img/gallery/n14.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/20/preview.jpg"
+                                          onclick="def(myImg18)" />
+                                       <input id="answer_a18" name="website_1_answers[]" type="checkbox"
+                                          value="18" class="required check">
+                                       <label for="answer_a18" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg19" src="img/gallery/n15.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/22/preview.jpg"
+                                          onclick="def(myImg19)" />
+                                       <input id="answer_a19" name="website_1_answers[]" type="checkbox"
+                                          value="19" class="required check">
+                                       <label for="answer_a19" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg20" src="img/gallery/n16.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/23/preview.jpg"
+                                          onclick="def(myImg20)" />
+                                       <input id="answer_a20" name="website_1_answers[]" type="checkbox"
+                                          value="20" class="required check">
+                                       <label for="answer_a20" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg21" src="img/gallery/n17.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/24/preview.jpg"
+                                          onclick="def(myImg21)" />
+                                       <input id="answer_a21" name="website_1_answers[]" type="checkbox"
+                                          value="21" class="required check">
+                                       <label for="answer_a21" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg22" src="img/gallery/n18.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/25/preview.jpg"
+                                          onclick="def(myImg22)" />
+                                       <input id="answer_a22" name="website_1_answers[]" type="checkbox"
+                                          value="22" class="required check">
+                                       <label for="answer_a22" class="like p-1">auswählen
+                                       </label>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg23" src="img/gallery/n19.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/26/preview.jpg"
+                                          onclick="def(myImg23)" />
+                                       <input id="answer_a23" name="website_1_answers[]" type="checkbox"
+                                          value="23" class="required check">
+                                       <label for="answer_a23" class="like p-1">auswählen
+                                       </label>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg24" src="img/gallery/n20.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/27/preview.jpg"
+                                          onclick="def(myImg24)" />
+                                       <input id="answer_a24" name="website_1_answers[]" type="checkbox"
+                                          value="24" class="required check">
+                                       <label for="answer_a24" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg25" src="img/gallery/n21.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=" "
+                                          data-new="https://sitebauer.de/templates/28/preview.jpg"
+                                          onclick="def(myImg25)" />
+                                       <input id="answer_a25" name="website_1_answers[]" type="checkbox"
+                                          value="25" class="required check">
+                                       <label for="answer_a25" class="like p-1" >auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg26" src="img/gallery/n22.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/6/preview.jpg"
+                                          onclick="def(myImg26)" />
+                                       <input id="answer_a26" name="website_1_answers[]" type="checkbox"
+                                          value="26" class="required check">
+                                       <label for="answer_a26" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg27" src="img/gallery/n24.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/12/preview.jpg"
+                                          onclick="def(myImg27)" />
+                                       <input id="answer_a27" name="website_1_answers[]" type="checkbox"
+                                          value="27" class="required check">
+                                       <label for="answer_a27" class="like p-1">auswählen
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6 col-12 p-3" style="background:url(./img/gallery/gray.jpg);  background-size: 245px 340px ;   background-repeat:space; background-position: right 5px bottom 6px ;">
+                                    <div class="item">
+                                       <img id="myImg28" src="img/gallery/n23.jpg"
+                                          class="js-gallery img-fluid d-block mx-auto mb-0" alt=""
+                                          data-new="https://sitebauer.de/templates/21/preview.jpg"
+                                          onclick="def(myImg28)" />
+                                       <input id="answer_a28" name="website_1_answers[]" type="checkbox"
+                                          value="28" class="required check">
+                                       <label for="answer_a28" class="like p-1">auswählen hjyth
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <p id="gallery_selected_message" class="text-center mt-3"></p>
+                           </div>
+                        </div>
+                        <!-- /Budget ============================== -->
+                        <!-- Last step ============================== -->
+                        <div class="submit step" id="end">
+                           <div class="question_title">
+                              <h3>Menüführung auswählen</h3>
+                              <p>Bitte wählen Sie menüpunkten für ihre Website aus</p>
+                           </div>
+                           <div class="row justify-content-center">
+                              <div class="col-lg-5">
+                                 <div class="box_general">
+                                    <div class="checkbox_questions">
+                                       <input id="check1" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+                                          value="Start" onclick="menuSelected(check1)">
+                                       <label id="check1">Start</label>
+                                    </div>
+                                    <div class="checkbox_questions">
+                                       <input id="check2" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+                                          value="About Us" onclick="menuSelected(check2)">
+                                       <label id="check2">Über uns</label>
+                                    </div>
+                                    <div class="checkbox_questions">
+                                       <input id="check3" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+                                          value="Services" onclick="menuSelected(check3)">
+                                       <label id="check3">Leistungen</label>
+                                    </div>
+                                    <div class="checkbox_questions">
+                                       <input id="check4" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+                                          value="Gallery References" onclick="menuSelected(check4)">
+                                       <label id="check4">Referenzen</label>
+                                    </div>
+                                    <div class="checkbox_questions">
+                                       <input id="check5" name="menu_1_answers[]" type="checkbox" class="siteMenu"
+                                          value="Contact" onclick="menuSelected(check5)">
+                                       <label id="check5">Kontakt</label>
+                                    </div>
+                                    <button type="button" class="btn btn-default btn-sm" new-line > 
+                                    <img src="./img/plus.png" alt="" > Eigenen Menüpunkt hinzufügen
+                                    </button>
+                                    <div class="mt-4" new-menu >
+                                    </div>
+                                 </div>
+                                 <!-- /box_general -->
+                              </div>
+                           </div>
+                           <!-- /row -->
+                        </div>
+                        <!-- /Last step ============================== -->
+                     </div>
+                  </div>
+                  <!-- /middle-wizard -->
+                  <div id="bottom-wizard">
+                     <button type="button" name="backward" class="backward">Zurück </button>
+                     <button type="button" name="forward" class="forward">Weiter</button>
+                     <button type="submit" name="process" class="submit">Bestellen</button>
+                  </div>
+                  <!-- /bottom-wizard -->
+               </form>
+            </div>
+            <!-- /Wizard container -->
+         </div>
+         <!-- /Container -->
+      </main>
+      <!-- /main -->
+      <main style="height:auto">
+         <footer>
+            <!-- <div class="container clearfix">
+               <ul> -->
+            <!-- <li><a href="index.html" class="animated_link active">Multiple Branch</a></li>
+               <li><a href="index-2.html" class="animated_link">Single Branch</a></li>
+               <li><a href="index-3.html" class="animated_link">Without Branch</a></li>
+               <li><a href="index-4.html" class="animated_link">Images Version</a></li>
+               <li><a href="#0" class="animated_link"><strong>Purchase this Template</strong></a></li> -->
+            <!-- </ul>
+               <p>© 2017 Steps</p>
+               </div> -->
+         </footer>
+         <!-- /footer -->
+      </main>
+      <!-- <div class="cd-overlay-nav">
+         <span></span>
+         </div> -->
+      <!-- /cd-overlay-nav -->
+      <!-- <div class="cd-overlay-content">
+         <span></span>
+         </div> -->
+      <!-- /cd-overlay-content -->
+      <!-- /cd-nav-trigger -->
+      <!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="termsLabel">Terms and conditions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>,
+                     mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus,
+                     pro ne quod dicunt sensibus.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+                     dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+                     sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum
+                     accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum
+                     sanctus, pro ne quod dicunt sensibus.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+                     dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+                     sensibus.
+                  </p>
+               </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+            </div>
+         </div>
+
+      <!-- /Modal terms -->
+      <!-- COMMON SCRIPTS -->
+      <script src="js/jquery-2.2.4.min.js"></script>
+      <script src="js/common_scripts.min.js"></script>
+      <script src="js/menu.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/wizard_func_multiple_branch.js"></script>
+      <script src="js/uploadImage.js"></script>
+      <script src="js/select2.min.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      <script src="./js/popupImage.js"></script>
+      <script src="./js/do_domain_option.js"></script>
+      <script src="./js/gallery_selector.js"></script>
+      <script src="./js/menu_selected.js"></script>
+      <script>
+         function checkURL(o) {
+         o.value = o.value.replace(/^(https?:\/\/)?/i, "http://"); 
+         }
+      </script>
+      <script>
+         $(document).ready(function () {
+         	$('.js-example-basic-multiple').select2();
+         
+         	
+         	
+         });
+         
+         $('[data-fancybox="gallery"]').fancybox({
+         	// Options will go here
+         });
+         
+         
+         
+         /**
+         Add and remove of menu
+         **/
+         var count = 0;
+         
+         $("[new-line]").click(function() {
+         	count = count + 1;
+         	$('[new-menu]').append(`
+         	<div class="form-group input-group mb-3" id="row_${count}" other-menu>
+         		<input type="text" class="form-control" placeholder="Neue page" name="menu_1_answers[]"
+         		id="menu_new${count}" selected-text-box style="border:0; border-bottom: 2px solid black;">
+         		<span class="input-group-text" id="basic_addon${count}" onclick="removeLine(basic_addon${count})" style="cursor:pointer; background-color:white; border:0; border-bottom: 2px solid black; " >
+         				<b>X</b>
+         		</span>
+         	</div>
+         	`)
+         
+         	/**
+         	 * Add new card with upload
+         	 * **/
+         	$('[new-card]').append(`<div class="card"  menu_new${count}>
+         		<div class="card-header" id="headingSix">
+         			<h2 class="mb-0">
+         				<button class="btn btn-link collapsed" type="button"
+         					data-toggle="collapse" data-target="#collapse_new${count}"
+         					aria-expanded="false" aria-controls="collapse_new${count}">
+         					Menu Title
+         				</button>
+         			</h2>
+         		</div>
+         		<div id="collapse_new${count}" class="collapse"
+         			aria-labelledby="headingOne" data-parent="#accordionExample">
+         			<div class="card-body">
+         				<textarea class="form-control" rows="8" cols="40"
+         					id="comment" placeholder="Enter text here"></textarea>
+         				<div class="input-group mb-3">
+         					<div class="input-group-prepend">
+         						<span class="input-group-text">Upload Pictures
+         							here</span>
+         					</div>
+         					<div class="custom-file">
+         						<input id="fileupload_${count}" type="file"
+         							multiple="multiple" name="files[]"
+         							class="custom-file-input" onclick="antman(fileupload_${count}, dvPreview_${count})">
+         						<label class="custom-file-label"
+         							for="inputGroupFile01"></label>
+         					</div>
+         				</div>
+         				<hr />
+         				<b>Live Preview</b>
+         				<br />
+         				<br />
+         				<div id="dvPreview_${count}">
+         				</div>
+         			</div>
+         		</div>
+         	</div>`);
+         
+         	/**
+         	 * Replace menu button value
+         	 **/
+         	$("[selected-text-box]:input").keyup(function(e) {
+         		var input_id = $(this).attr('id');
+         		var input_value = $(this).val();
+         		$('[new-card]').find( '[' + input_id + ']' ).find('button').html(input_value);
+         	})
+         
+         });
+         
+         function removeLine(elemId) {
+         	var input_id = $(elemId).parents("[other-menu]").find( "[selected-text-box]:input" ).attr('id');
+         	$(elemId).parents('[other-menu]').remove();
+         	$('[new-card]').find( '[' + input_id + ']' ).remove();
+         }
+         
+         
+         
+      </script>
+   </body>
+</html>
