@@ -32,5 +32,10 @@ function menuSelected(menuCheckboxId){
 function checkboxCounter()
 {
     var total_check = $(".siteMenu:checkbox:checked").length;
+    if(total_check == 0){
+        $(".submit").prop('disabled', true);
+    }else {
+        $(".submit").prop('disabled', false);
+    }
     $("#selected_message").html(`You Selected ${total_check} Menu`);
 }
