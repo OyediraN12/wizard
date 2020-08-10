@@ -71,9 +71,9 @@
 							"domain_name" => $_POST['domain_name']
 						];
 
-						$personal_info =  json_encode($personal_info);
+						$personal_info_json =  json_encode($personal_info);
 
-						$message.= $personal_info;
+						$message.= $personal_info_json;
 
 						$websites = [];
 
@@ -110,7 +110,7 @@
 						
 						// insert into database 
 						$insert = $mysqli->prepare("INSERT INTO formmm(project_name, personal_info, websites, menus, documents) VALUES(?,?,?,?,?)");
-						$insert->bind_param("sssss", $project_name, $personal_info, $websites, $menus_selected, $documents);
+						$insert->bind_param("sssss", $project_name, $personal_info_json, $websites, $menus_selected, $documents);
 						$insert->execute();
 
 						if (isset($_FILES['files']) && $_FILES['files'] != "")
