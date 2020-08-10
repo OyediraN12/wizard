@@ -2,7 +2,6 @@
  * for menu selected - start, about, us
  * Store in localstorage
  **/
-
 function menuSelected(menuCheckboxId){
     var checkval = menuCheckboxId.value;
     $(menuCheckboxId).change(function(){
@@ -33,9 +32,9 @@ function checkboxCounter()
 {
     var total_check = $(".siteMenu:checkbox:checked").length;
     if(total_check == 0){
-        $(".submit").prop('disabled', true);
+        $("button.submit").prop('disabled', true);
     }else {
-        $(".submit").prop('disabled', false);
+        $("button.submit").prop('disabled', false);
     }
     $("#selected_message").html(`You Selected ${total_check} Menu`);
 }
